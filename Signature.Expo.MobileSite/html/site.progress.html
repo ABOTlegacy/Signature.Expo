@@ -1,0 +1,11 @@
+<h1>HELLO WORLD</h1>
+<div id="unlock-umbrella-message" style="display: none;">You Unlocked Umbrella</div>
+
+<script>
+    var rewards = $.configuration.getRewards();
+    for (var i = 0; i < rewards.length; i++) {
+        if (rewards[i].name == "umbrellas" && rewards[i].unlocked == true) {
+            $("#unlock-umbrella-message").show();
+        }
+    }
+</script>

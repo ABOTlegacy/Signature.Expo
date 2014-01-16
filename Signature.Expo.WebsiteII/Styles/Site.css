@@ -1,0 +1,69 @@
+﻿/* Reset */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, font, img {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+/* Main Elements */
+body{background: #1b7bbf url("../Site_Files/Background04.png") no-repeat;  font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif; color: #696969; padding-top: 10px;}
+
+/* Header */
+#Header{width: 100%; height: 100px; background: #21007F;}
+#Nav{background: #505050; color: #F9F9F9; padding: 5px; margin-bottom: 20px;}
+    #Nav A{color: #F9F9F9; text-decoration: none; font-style: normal;}
+    #Nav A:hover{text-decoration: underline;}
+
+/* Text Elements */
+H1{padding-bottom: 15px; font-size: 24px;}
+H2{padding-bottom: 10px; font-size: 18px;}
+
+/* Random Classes */
+Input{margin: 0px 0px 0px 0px;}
+A{ color: #666666; font-style: italic;}
+.smallParagraphs{font-size: 12px;}
+.isALink{text-decoration: underline; cursor: pointer;}
+#isLogout{font-size: 10px;}
+.fieldHalfs{width: 450px; display: inline-block; padding: 5px; display: -moz-inline-stack; vertical-align: top; zoom: 1; *display: inline;}
+.fieldHalfsLeft{width: 550px; display: inline-block; padding: 15px; display: -moz-inline-stack; vertical-align: top; zoom: 1; *display: inline;}
+.fieldHalfsRight{width: 330px; display: inline-block; padding: 15px; display: -moz-inline-stack; vertical-align: top; zoom: 1; *display: inline;}
+.rightOptions{width: 330px; background-color: #505050; padding: 5px; height: 25px; color: #F9F9F9; cursor: pointer; margin: 5px 0px 0px 0px;}
+    .rightOptions:hover{background-color: #999999;}
+.rightOptionsAdd{background: #CCCCCC; width: 315px; padding: 10px 15px 10px 10px;}
+.pageTitle{padding: 0px; margin: 0px;}
+.pageControl{margin-left: 5px; margin-right: 1px;}
+
+/* Survey Group Manager */
+.TableElementDiv{display: inline-block; padding: 0px 5px 0px 5px; zoom: 1; *display: inline;}
+
+/* Survey Manager */
+#QGTitle{width: 200px; display: inline-block; padding: 0px 5px 0px 5px; zoom: 1; *display: inline;}
+#QGNumElements{width: 125px; display: inline-block; padding: 0px 5px 0px 5px; zoom: 1; *display: inline;}
+#QGDescription{width: 300px; display: inline-block; padding: 0px 5px 0px 5px; zoom: 1; *display: inline;}
+#QGOptions{width: 275px; display: inline-block; padding: 0px 5px 0px 5px; zoom: 1; *display: inline;}
+
+/* Question Group Manager */
+#QETitle{width: 150px; display: inline-block; padding: 0px 5px 0px 5px; zoom: 1; *display: inline;}
+#QEType{width: 150px; display: inline-block; padding: 0px 5px 0px 5px; zoom: 1; *display: inline;}
+#QEDescription{width: 200px; display: inline-block; padding: 0px 5px 0px 5px; zoom: 1; *display: inline;}
+#QEOptions{width: 300px; display: inline-block; padding: 0px 5px 0px 5px; zoom: 1; *display: inline;}
+
+/* Entity Group Manager */
+#EGText{width: 200px; display: inline-block; padding: 0px 5px 0px 5px; zoom: 1; *display: inline;}
+#EGSelected{width: 125px; display: inline-block; padding: 0px 5px 0px 5px; zoom: 1; *display: inline;}
+#EGOptions{width: 300px; display: inline-block; padding: 0px 5px 0px 5px; zoom: 1; *display: inline;}
+
+/* Users */
+#UName{width: 200px; display: inline-block; padding: 0px 5px 0px 5px; zoom: 1; *display: inline;}
+#ULevel{width: 125px; display: inline-block; padding: 0px 5px 0px 5px; zoom: 1; *display: inline;}
+#UOptions{width: 300px; display: inline-block; padding: 0px 5px 0px 5px; zoom: 1; *display: inline;}
+
+/* Users */
+#UASurveyTitle{width: 350px; display: inline-block; padding: 0px 5px 0px 5px; zoom: 1; *display: inline;}
+#UANumElements{width: 150px; display: inline-block; padding: 0px 5px 0px 5px; zoom: 1; *display: inline;}
+#UAOptions{width: 300px; display: inline-block; padding: 0px 5px 0px 5px; zoom: 1; *display: inline;}

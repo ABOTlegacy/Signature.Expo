@@ -1,0 +1,5 @@
+C:\projects\Signature.Expo\Signature.Expo.PacmanII\bin\Signature.Expo.PacmanII.dll
+C:\projects\Signature.Expo\Signature.Expo.PacmanII\bin\Signature.Expo.PacmanII.pdb
+C:\projects\Signature.Expo\Signature.Expo.PacmanII\obj\Debug\Signature.Expo.PacmanII.csprojResolveAssemblyReference.cache
+C:\projects\Signature.Expo\Signature.Expo.PacmanII\obj\Debug\Signature.Expo.PacmanII.dll
+C:\projects\Signature.Expo\Signature.Expo.PacmanII\obj\Debug\Signature.Expo.PacmanII.pdb

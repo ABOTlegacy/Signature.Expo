@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "crazystraw",
+        "unlocked": false,
+        "icon": "",
+        "trials": [
+            {
+                "id": "",
+                "unlocked": false
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "laie",
+        "unlocked": false,
+        "icon": ""
+    },
+    {
+        "id": 3,
+        "name": "umbrellas",
+        "unlocked": false,
+        "icon": ""
+    }
+]

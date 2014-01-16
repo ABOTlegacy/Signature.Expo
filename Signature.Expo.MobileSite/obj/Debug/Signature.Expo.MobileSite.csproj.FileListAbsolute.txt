@@ -1,0 +1,4 @@
+C:\projects\Signature.Expo\Signature.Expo.MobileSite\bin\Signature.ARCodes.dll
+C:\projects\Signature.Expo\Signature.Expo.MobileSite\bin\Signature.ARCodes.pdb
+C:\projects\Signature.Expo\Signature.Expo.MobileSite\obj\Debug\Signature.ARCodes.dll
+C:\projects\Signature.Expo\Signature.Expo.MobileSite\obj\Debug\Signature.ARCodes.pdb

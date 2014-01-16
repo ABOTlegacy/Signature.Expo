@@ -1,0 +1,14 @@
+﻿div.wrap section.cards article:hover > img.mouseoff {
+    display: none;
+}
+div.wrap section.cards article > img.mouseoff {
+    display: block;
+}
+
+
+div.wrap section.cards article:hover > img.mouseon {
+    display: block;
+}
+div.wrap section.cards article > img.mouseon {
+    display: none;
+}
