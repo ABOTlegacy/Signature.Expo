@@ -15,7 +15,12 @@
         "id": 2,
         "name": "laie",
         "unlocked": false,
-        "icon": ""
+        "icon": "",
+		"trials": [
+        {
+            "id": "",
+            "unlocked": false
+        }
     },
     {
         "id": 3,
