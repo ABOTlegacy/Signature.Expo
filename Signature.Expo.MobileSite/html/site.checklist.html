@@ -10,21 +10,26 @@
             class: "reward",
         });
 
+        var $miniChecklistDiv = $("<div>",{
+            class: "miniChecklist",
+        });
+
         for (var j = 0; j < rewards[i].trials.length; j++) {
-            $newTaskDiv = $("<div>").append(rewards[i].trials[j].description);
+            $newTaskSpan = $("<span>").append(rewards[i].trials[j].description);
             if (rewards[i].trials[j].unlocked) {
-                $newTaskDiv.addClass("completed")
+                $newTaskSpan.addClass("completed")
             }
-            $newRewardDiv.append($newTaskDiv);
+            $miniChecklistDiv.append($newTaskSpan);
         }
 
         var $rewardImg = $("<img>");
-        if (rewards[i].unlocked) {
+        if (rewards[i].unlock) {
             $rewardImg.attr("src", rewards[i].iconComplete);
         } else {
             $rewardImg.attr("src", rewards[i].iconIncomplete);
         }
 
+        $newRewardDiv.append($miniChecklistDiv);
         $newRewardDiv.append($rewardImg);
 
         $checklistDiv.append($newRewardDiv);

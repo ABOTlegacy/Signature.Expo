@@ -1,0 +1,63 @@
+﻿body {
+    background-color:  #006699;
+    color: #FFFFFF;
+    font-family: "Arial", "Helvetica", sans-serif;
+}
+
+div.reward {
+    display: table;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+div.reward img {
+    float: right;
+}
+
+div.reward span.completed {
+    text-decoration: line-through;
+}
+
+div.reward span {
+    display: block;
+    margin-left: 10%;
+}
+
+div.reward span:before {
+    content: "O  ";
+}
+
+div.miniChecklist {
+    width: 60%;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+h2 {
+    text-align: center;
+}
+
+img.poster {
+	width: 100%;
+}
+
+a#takeMe
+{
+	background-color: #006699;
+	color: #FFA319;
+	text-decoration: none;
+	font-size: 150%;
+	padding: 5px;
+	border-radius: 10px;
+	display: inline-block;
+	width: 30%;
+	margin-left: 35%;
+	text-align: center;
+	margin-top: 5px;
+	font-weight: bold;
+}
+
+a#takeMe:active
+{
+	background-color: #FFFF00;
+}

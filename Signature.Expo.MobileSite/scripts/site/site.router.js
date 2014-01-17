@@ -12,7 +12,7 @@
          * Returns the value of Rewards
          */
 		initialize: function () {
-		    if ($.utils.getUrlVar("action") == "") {
+		    if ($.utils.getUrlVar("action") == "" || $.utils.getUrlVar("action")===undefined) {
 		        this.main();
 		    }  else if ($.utils.getUrlVar("action") == "start") {
 		        this.start();
@@ -30,6 +30,7 @@
          * @TODO
          */
 		main: function () {
+		    $("body").empty().load("html/site.frontpage.html");
 		},
 
 
@@ -49,12 +50,16 @@
 		                $.configuration.setRewards(data);
 		                // Display Content
 		                $("body").empty().load("html/site.start.html");
+		                $("body").load("html/site.checklist.html");
 		            },
-		            fail: function() {
+		            fail: function () {
 		            }
 		        });
 		    }
-
+		    else {
+		        $("body").empty().load("html/site.start.html");
+		        $("body").load("html/site.checklist.html");
+		    }
 
 		},
 
