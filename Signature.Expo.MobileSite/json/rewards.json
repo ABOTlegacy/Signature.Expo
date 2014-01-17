@@ -3,10 +3,19 @@
         "id": 1,
         "name": "crazystraw",
         "unlocked": false,
-        "icon": "",
+        "iconComplete": "images/crazystraw.jpg",
+		"iconIncomplete": "images/crazystraw_bw.jpg",
         "trials": [
             {
-                "id": "",
+                "id": "task1",
+                "unlocked": false
+            },
+			{
+                "id": "task2",
+                "unlocked": false
+            },
+			            {
+                "id": "task3",
                 "unlocked": false
             }
         ]
@@ -15,17 +24,42 @@
         "id": 2,
         "name": "laie",
         "unlocked": false,
-        "icon": "",
-		"trials": [
-        {
-            "id": "",
-            "unlocked": false
-        }
+        "iconComplete": "images/laie.jpg",
+		"iconIncomplete": "images/laie_bw.jpg",
+        "trials": [
+            {
+                "id": "sigfavdrink",
+                "unlocked": false
+            },
+			            {
+                "id": "sigdemo",
+                "unlocked": false
+            },
+			            {
+                "id": "sigdice",
+                "unlocked": false
+            }
+	    ]
     },
     {
         "id": 3,
-        "name": "umbrellas",
+        "name": "umbrella",
         "unlocked": false,
-        "icon": ""
+        "iconComplete": "images/umbrella.jpg",
+		"iconIncomplete": "images/umbrella_bw.jpg",
+	    "trials": [
+            {
+                "id": "task4",
+                "unlocked": false
+            },
+			            {
+                "id": "task5",
+                "unlocked": false
+            },
+			            {
+                "id": "task6",
+                "unlocked": false
+            }
+	    ]
     }
 ]
