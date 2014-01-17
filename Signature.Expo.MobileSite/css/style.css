@@ -29,13 +29,16 @@ div.reward span.completed {
 div.reward span {
     display: block;
     margin-left: 10%;
-    font-size: 115%;
+    font-size: 122%;
 }
 
 div.reward span:before {
-    content: "O  ";
+    content: "• ";
 }
 
+div.reward span.completed:before {
+    content: ""
+}
 div.miniChecklist {
     width: 60%;
     vertical-align: middle;
@@ -108,4 +111,17 @@ div.gameDescription {
     margin-right: 2%;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+div#congrats p {
+    font-size: 130%;
+    text-align: center;
+    background-color:  rgb(65,122,141);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+img#congratsImage {
+    width: 60%;
+    margin-left: 20%;
 }

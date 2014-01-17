@@ -11,7 +11,12 @@
 <script>
     var rewards = $.configuration.getRewards();
     $checklistDiv = $("div#checklist");
+    var finalUnlock = true;
     for (var i = 0; i < rewards.length; i++) {
+
+        if (rewards[i].unlock === false) {
+            finalUnlock = false;
+        }
 
         $checklistDiv.append($("<h2>").append(rewards[i].name));
 
@@ -43,8 +48,11 @@
 
         $checklistDiv.append($newRewardDiv);
 
+    }
+    if (finalUnlock) {
+
+        $checklistDiv.empty().load("html/site.congrats.html");
 
     }
-
 
 </script>
