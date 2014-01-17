@@ -4,15 +4,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <!-- Styles -->
-    <link rel="stylesheet" href="Styles/Site.css" type="text/css" />
-    <link rel="stylesheet" href="Styles/Meet.css" type="text/css" />
-    <link rel="stylesheet" href="Styles/MeetTheTeam.css" type="text/css" />
-    <link rel="stylesheet" href="Styles/jquery-ui-1.10.0.min.css" type="text/css" />
+    <link rel="stylesheet" href="styles/Site.css" type="text/css" />
+    <link rel="stylesheet" href="styles/Meet.css" type="text/css" />
+    <link rel="stylesheet" href="styles/MeetTheTeam.css" type="text/css" />
+    <link rel="stylesheet" href="styles/jquery-ui-1.10.0.min.css" type="text/css" />
 
     <!-- Script -->
-    <script src="Scripts/jquery-1.9.0.js"></script>
-    <script src="Scripts/jquery-ui-1.10.0.min.js"></script>
-    <script src="Scripts/custom-script.js"></script>
+    <script src="scripts/jquery-1.9.0.js"></script>
+    <script src="scripts/jquery-ui-1.10.0.min.js"></script>
     
     <!-- Title -->
     <title>WennSoft Expo</title>

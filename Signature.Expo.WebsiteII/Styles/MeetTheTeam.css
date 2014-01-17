@@ -12,3 +12,17 @@ div.wrap section.cards article:hover > img.mouseon {
 div.wrap section.cards article > img.mouseon {
     display: none;
 }
+
+
+
+ul{
+  overflow: hidden;
+}
+li{
+  line-height: 1.5em;
+  float: left;
+  list-style: initial;
+  display: list-item;
+  margin: 0px 0px 0px 0px;
+}
+#double li  { width: 50%;}

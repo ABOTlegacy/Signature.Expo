@@ -1,0 +1,41 @@
+﻿<div id="tile-builder">
+    <!-- Content Goes Here -->
+</div>
+
+<script type="text/javascript">
+    // Instantiate Variables
+    var isNewSection = true;
+    var counter = 0;
+
+    // Loop through team members
+    for (var i = 0; i < $.configuration.getTeam().length; i++) {
+        
+        // Start New Section
+        if (isNewSection) {
+            $("#tile-builder").append("<section class=\"split3 cards current\" id=\"tileholders\"></section>");
+            isNewSection = false;
+        }
+
+        var string = "" +
+            "<article class=\"col" + ((counter == 0) ? " first" : "") + "\">" +
+                "<img class=\"mouseoff\" src=\"images/" + $.configuration.getTeam()[i].image[0] + "\">" +
+                "<img class=\"mouseon\" src=\"images/" + $.configuration.getTeam()[i].image[1] + "\">" +
+				"<div class=\"cushion\">" +
+                    "<h3>" + $.configuration.getTeam()[i].name + "</h3>" +
+					"<p class=\"meta\">" + $.configuration.getTeam()[i].teamname + "</p>" +
+                    "<p class=\"meta\">" + $.configuration.getTeam()[i].position + "</p>" +
+				"</div>" +
+			"</article>" +
+			"";
+        $("#tileholders.current").append(string);
+
+        // End Section or Increase Counter
+        counter++;
+        if (counter == 4 || i == ($.configuration.getTeam().length - 1)) {
+            counter = 0;
+            isNewSection = true;
+            $("#tileholders.current").removeClass("current");
+        }
+    }
+</script>
+

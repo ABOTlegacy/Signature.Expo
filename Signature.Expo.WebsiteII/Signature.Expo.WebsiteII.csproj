@@ -57,16 +57,26 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="html\Tiles.html" />
+    <Content Include="images\abottom.png" />
+    <Content Include="images\abottom_grayscale.png" />
+    <Content Include="images\default.png" />
+    <Content Include="images\default_grayscale.png" />
     <Content Include="Index.aspx" />
     <Content Include="LearnWhatWeDo.aspx" />
     <Content Include="MeetTheTeam.aspx" />
-    <Content Include="Scripts\custom-script.js" />
-    <None Include="Scripts\jquery-1.4.1-vsdoc.js" />
-    <Content Include="Scripts\jquery-1.4.1.js" />
-    <Content Include="Scripts\jquery-1.4.1.min.js" />
-    <Content Include="Scripts\jquery-1.9.0.js" />
-    <Content Include="Scripts\jquery-ui-1.10.0.js" />
-    <Content Include="Scripts\jquery-ui-1.10.0.min.js" />
+    <Content Include="json\team.json" />
+    <Content Include="MeetTheTeam.html" />
+    <Content Include="scripts\jquery\jquery-1.9.0.js" />
+    <Content Include="scripts\jquery\jquery-ui-1.10.0.min.js" />
+    <Content Include="scripts\jquery\jquery-1.9.1.js" />
+    <Content Include="scripts\jquery\jquery.cookie.js" />
+    <Content Include="scripts\jquery\jquery.urldecoder.js" />
+    <Content Include="scripts\json\json2.js" />
+    <Content Include="scripts\site\site.configuration.js" />
+    <Content Include="scripts\site\site.content.js" />
+    <Content Include="scripts\site\site.rewards.js" />
+    <Content Include="scripts\site\site.utils.js" />
     <Content Include="Site_Files\Background.png" />
     <Content Include="Site_Files\Background02.png" />
     <Content Include="Site_Files\Background03.png" />
@@ -103,11 +113,11 @@
     <Content Include="Site_Files\WP_003326.png" />
     <Content Include="Site_Files\WP_003326_grayscale.png" />
     <Content Include="Site_Files\WP_003326_oldphoto.png" />
-    <Content Include="Styles\jquery-ui-1.10.0.css" />
-    <Content Include="Styles\jquery-ui-1.10.0.min.css" />
-    <Content Include="Styles\Meet.css" />
-    <Content Include="Styles\MeetTheTeam.css" />
-    <Content Include="Styles\Site.css" />
+    <Content Include="styles\jquery-ui-1.10.0.css" />
+    <Content Include="styles\jquery-ui-1.10.0.min.css" />
+    <Content Include="styles\Meet.css" />
+    <Content Include="styles\MeetTheTeam.css" />
+    <Content Include="styles\Site.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -146,9 +156,9 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
-          <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>57661</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:57661/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

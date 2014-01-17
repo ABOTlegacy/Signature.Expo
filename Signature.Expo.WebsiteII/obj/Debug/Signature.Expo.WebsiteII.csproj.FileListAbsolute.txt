@@ -1,0 +1,5 @@
+C:\projects\Signature.Expo\Signature.Expo.WebsiteII\bin\Signature.Expo.WebsiteII.dll
+C:\projects\Signature.Expo\Signature.Expo.WebsiteII\bin\Signature.Expo.WebsiteII.pdb
+C:\projects\Signature.Expo\Signature.Expo.WebsiteII\obj\Debug\Signature.Expo.WebsiteII.csprojResolveAssemblyReference.cache
+C:\projects\Signature.Expo\Signature.Expo.WebsiteII\obj\Debug\Signature.Expo.WebsiteII.dll
+C:\projects\Signature.Expo\Signature.Expo.WebsiteII\obj\Debug\Signature.Expo.WebsiteII.pdb

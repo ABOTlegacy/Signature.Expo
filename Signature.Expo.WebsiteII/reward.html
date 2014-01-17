@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/Site.css" type="text/css" />
+    <link rel="stylesheet" href="styles/Meet.css" type="text/css" />
+    <link rel="stylesheet" href="styles/MeetTheTeam.css" type="text/css" />
+    <link rel="stylesheet" href="styles/jquery-ui-1.10.0.min.css" type="text/css" />
+
+    <!-- Script -->
+    <script type="text/javascript" src="scripts/jquery/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="scripts/jquery/jquery-ui-1.10.0.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery/jquery.cookie.js"></script>
+    <script type="text/javascript" src="scripts/json/json2.js"></script>
+    <script type="text/javascript" src="scripts/site/site.configuration.js"></script>
+
+    <!-- Initialize -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            if ($.configuration.getUnlocked() == "true") {
+                $.configuration.setUnlocked("false");
+                $("#QRCodeReward").show();
+            } else {
+                window.location = "instructions.html";
+            }
+        });
+    </script>
+    
+    <!-- Title -->
+    <title>WennSoft Expo</title>
+</head>
+<body>
+<div id="MainCenter">
+    <!-- Main Content -->
+    <div class="wrap">
+
+        <!-- Main Banner -->
+	    <div class="carousel-wrap">
+		    <img src="Site_Files/WennSoftSignature02.png" class="rsImg rsMainSlideImage" style="width: 100%;">
+	    </div>
+
+        <!-- Reward -->
+        <section class="split3_2-1-alt cards" id="QRCodeReward" style="display: none;">
+			<article class="col first about-us">
+				<h2>Congratulations!</h2>
+				<p>
+                    You have unlocked the MEET OUR TEAM challenge!
+                </p>
+                <p>
+                    <img src="Site_Files/tron_qrcode.jpg" />
+                </p>
+				<p>
+                    It has been a pleasure meeting you!
+                </p>
+			</article>
+
+            <!-- Some possible drink answers include -->
+            <article id="AnswerKeyContent" class="col about-us"></article>
+		</section>
+	</div>
+</div>
+</body>
+</html>
