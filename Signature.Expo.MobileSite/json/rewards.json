@@ -8,15 +8,18 @@
         "trials": [
             {
                 "id": "task1",
-                "unlocked": false
+                "unlocked": false,
+				"description" : "Task 1"
             },
 			{
                 "id": "task2",
-                "unlocked": false
+                "unlocked": false,
+				"description" : "Task 2"
             },
 			            {
                 "id": "task3",
-                "unlocked": false
+                "unlocked": false,
+				"description" : "Task 1"
             }
         ]
     },
@@ -29,15 +32,18 @@
         "trials": [
             {
                 "id": "sigfavdrink",
-                "unlocked": false
+                "unlocked": false,
+				"description" : "Find out the Favorite Drink of Signature Team Members"
             },
 			            {
                 "id": "sigdemo",
-                "unlocked": false
+                "unlocked": false,
+				"description" : "Create and Complete a Service Call using Signature products"
             },
 			            {
                 "id": "sigdice",
-                "unlocked": false
+                "unlocked": false,
+				"description" : "Beat a Signature Team Member in Bar Dice"
             }
 	    ]
     },
@@ -50,15 +56,18 @@
 	    "trials": [
             {
                 "id": "task4",
-                "unlocked": false
+                "unlocked": false,
+				"description" : "Task 6"
             },
 			            {
                 "id": "task5",
-                "unlocked": false
+                "unlocked": false,
+				"description" : "Task 7"
             },
 			            {
                 "id": "task6",
-                "unlocked": false
+                "unlocked": false,
+				"description" : "Task 8"
             }
 	    ]
     }

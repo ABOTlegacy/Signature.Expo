@@ -77,6 +77,8 @@
 		        rewards[i].unlock = rewardUnlock;
 		    }
 		    $.configuration.setRewards(rewards);
+		    // Display Content
+		    $("body").empty().load("html/site.checklist.html");
 
 		},
 
