@@ -3,11 +3,23 @@
         "id": 1,
         "name": "crazystraw",
         "unlocked": false,
-        "icon": "",
+        "iconComplete": "images/crazystraw.jpg",
+		"iconIncomplete": "images/crazystraw_bw.jpg",
         "trials": [
             {
-                "id": "",
-                "unlocked": false
+                "id": "task1",
+                "unlocked": false,
+				"description" : "Task 1"
+            },
+			{
+                "id": "task2",
+                "unlocked": false,
+				"description" : "Task 2"
+            },
+			            {
+                "id": "task3",
+                "unlocked": false,
+				"description" : "Task 1"
             }
         ]
     },
@@ -15,17 +27,48 @@
         "id": 2,
         "name": "laie",
         "unlocked": false,
-        "icon": "",
-		"trials": [
-        {
-            "id": "",
-            "unlocked": false
-        }
+        "iconComplete": "images/laie.jpg",
+		"iconIncomplete": "images/laie_bw.jpg",
+        "trials": [
+            {
+                "id": "sigfavdrink",
+                "unlocked": false,
+				"description" : "Find out the Favorite Drink of Signature Team Members"
+            },
+			            {
+                "id": "sigdemo",
+                "unlocked": false,
+				"description" : "Create and Complete a Service Call using Signature products"
+            },
+			            {
+                "id": "sigdice",
+                "unlocked": false,
+				"description" : "Beat a Signature Team Member in Bar Dice"
+            }
+	    ]
     },
     {
         "id": 3,
-        "name": "umbrellas",
+        "name": "umbrella",
         "unlocked": false,
-        "icon": ""
+        "iconComplete": "images/umbrella.jpg",
+		"iconIncomplete": "images/umbrella_bw.jpg",
+	    "trials": [
+            {
+                "id": "task4",
+                "unlocked": false,
+				"description" : "Task 6"
+            },
+			            {
+                "id": "task5",
+                "unlocked": false,
+				"description" : "Task 7"
+            },
+			            {
+                "id": "task6",
+                "unlocked": false,
+				"description" : "Task 8"
+            }
+	    ]
     }
 ]

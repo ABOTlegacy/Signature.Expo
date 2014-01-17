@@ -1,0 +1,41 @@
+﻿<h2> Development Island </h2>
+<div id="checklist"></div>
+
+<script>
+    var rewards = $.configuration.getRewards();
+    $checklistDiv = $("div#checklist");
+    for (var i = 0; i < rewards.length; i++) {
+
+        var $newRewardDiv = $("<div>", {
+            class: "reward",
+        });
+
+        var $miniChecklistDiv = $("<div>",{
+            class: "miniChecklist",
+        });
+
+        for (var j = 0; j < rewards[i].trials.length; j++) {
+            $newTaskSpan = $("<span>").append(rewards[i].trials[j].description);
+            if (rewards[i].trials[j].unlocked) {
+                $newTaskSpan.addClass("completed")
+            }
+            $miniChecklistDiv.append($newTaskSpan);
+        }
+
+        var $rewardImg = $("<img>");
+        if (rewards[i].unlock) {
+            $rewardImg.attr("src", rewards[i].iconComplete);
+        } else {
+            $rewardImg.attr("src", rewards[i].iconIncomplete);
+        }
+
+        $newRewardDiv.append($miniChecklistDiv);
+        $newRewardDiv.append($rewardImg);
+
+        $checklistDiv.append($newRewardDiv);
+
+
+    }
+
+
+</script>
