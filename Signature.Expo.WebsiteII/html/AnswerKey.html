@@ -1,0 +1,14 @@
+﻿<section class="about-list" id="listofanswers">
+    <h2>Possible Drink Answers include</h2>
+</section>
+
+<script type="text/javascript">
+    // Generate Answer Key
+    var str = "";
+    str += "<ul id=\"double\">";
+    for (var j = 0; j < $.configuration.getAnswerKey().length; j++) {
+        str += "<li>" + $.configuration.getAnswerKey()[j] + "</li>";
+    }
+    str += "</ul>";
+    $("#listofanswers").append(str);
+</script>
