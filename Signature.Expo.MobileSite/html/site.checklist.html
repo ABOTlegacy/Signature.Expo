@@ -1,4 +1,11 @@
-﻿<h2> Development Island </h2>
+﻿<img class="banner" src="images/banner.jpg" />
+<div class="gameDescription">
+    <p>The beautiful Development Island has three main attractions: <strong>Evolution Hut</strong>, <strong>Signature Cabana</strong>, and <strong>SQA Beach</strong>. Visit all three and complete tasks to collect their souvenirs. Collect all 3 souveneirs to earn a cocktail to enjoy on the beach.
+</p>
+    <div class="equationWrapper">
+    <img class="equation" src="images/equation.jpg"/>
+    </div>
+</div>
 <div id="checklist"></div>
 
 <script>
@@ -6,9 +13,11 @@
     $checklistDiv = $("div#checklist");
     for (var i = 0; i < rewards.length; i++) {
 
+        $checklistDiv.append($("<h2>").append(rewards[i].name));
+
         var $newRewardDiv = $("<div>", {
             class: "reward",
-        });
+        })
 
         var $miniChecklistDiv = $("<div>",{
             class: "miniChecklist",

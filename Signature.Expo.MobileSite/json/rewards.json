@@ -1,23 +1,23 @@
 [
     {
         "id": 1,
-        "name": "crazystraw",
+        "name": "Evolution Hut",
         "unlocked": false,
         "iconComplete": "images/crazystraw.jpg",
 		"iconIncomplete": "images/crazystraw_bw.jpg",
         "trials": [
             {
-                "id": "task1",
+                "id": "evoTask1",
                 "unlocked": false,
 				"description" : "Task 1"
             },
 			{
-                "id": "task2",
+                "id": "evoTask2",
                 "unlocked": false,
 				"description" : "Task 2"
             },
 			            {
-                "id": "task3",
+                "id": "evoTask3",
                 "unlocked": false,
 				"description" : "Task 1"
             }
@@ -25,7 +25,7 @@
     },
     {
         "id": 2,
-        "name": "laie",
+        "name": "Signature Cabana",
         "unlocked": false,
         "iconComplete": "images/laie.jpg",
 		"iconIncomplete": "images/laie_bw.jpg",
@@ -49,23 +49,23 @@
     },
     {
         "id": 3,
-        "name": "umbrella",
+        "name": "SQA Beach",
         "unlocked": false,
         "iconComplete": "images/umbrella.jpg",
 		"iconIncomplete": "images/umbrella_bw.jpg",
 	    "trials": [
             {
-                "id": "task4",
+                "id": "SQATask1",
                 "unlocked": false,
 				"description" : "Task 6"
             },
 			            {
-                "id": "task5",
+                "id": "SQATask2",
                 "unlocked": false,
 				"description" : "Task 7"
             },
 			            {
-                "id": "task6",
+                "id": "SQATask3",
                 "unlocked": false,
 				"description" : "Task 8"
             }

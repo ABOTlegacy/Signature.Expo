@@ -49,7 +49,7 @@
 		            success: function (data) {
 		                $.configuration.setRewards(data);
 		                // Display Content
-		                $("body").empty().load("html/site.start.html");
+		              //  $("body").empty().load("html/site.start.html");
 		                $("body").load("html/site.checklist.html");
 		            },
 		            fail: function () {
@@ -57,7 +57,7 @@
 		        });
 		    }
 		    else {
-		        $("body").empty().load("html/site.start.html");
+		        //$("body").empty().load("html/site.start.html");
 		        $("body").load("html/site.checklist.html");
 		    }
 
