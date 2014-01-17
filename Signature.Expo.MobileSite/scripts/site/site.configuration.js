@@ -28,7 +28,10 @@
          */
 		setRewards: function(rewards) {
 		    this._rewards = rewards;
-		    $.cookie('ABOT-rewards', JSON.stringify(rewards), {path: '/'});
+		    var now = new Date();
+		    var expiresDate = new Date();
+		    expiresDate.setDate(now.getDate() + 10);
+		    $.cookie('ABOT-rewards', JSON.stringify(rewards), { path: '/', expires: expiresDate });
 		}
 	}
 })(jQuery);
