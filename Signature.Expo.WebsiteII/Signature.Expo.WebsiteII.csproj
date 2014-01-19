@@ -57,6 +57,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="game.html" />
+    <Content Include="html\GameTiles.html" />
+    <Content Include="reward.html" />
+    <Content Include="instructions.html" />
+    <Content Include="html\AnswerKey.html" />
     <Content Include="html\Tiles.html" />
     <Content Include="images\abottom.png" />
     <Content Include="images\abottom_grayscale.png" />
@@ -73,6 +78,7 @@
     <Content Include="scripts\jquery\jquery.cookie.js" />
     <Content Include="scripts\jquery\jquery.urldecoder.js" />
     <Content Include="scripts\json\json2.js" />
+    <Content Include="scripts\site\site.game.js" />
     <Content Include="scripts\site\site.configuration.js" />
     <Content Include="scripts\site\site.content.js" />
     <Content Include="scripts\site\site.rewards.js" />
@@ -113,10 +119,12 @@
     <Content Include="Site_Files\WP_003326.png" />
     <Content Include="Site_Files\WP_003326_grayscale.png" />
     <Content Include="Site_Files\WP_003326_oldphoto.png" />
+    <Content Include="styles\buttons.css" />
     <Content Include="styles\jquery-ui-1.10.0.css" />
     <Content Include="styles\jquery-ui-1.10.0.min.css" />
     <Content Include="styles\Meet.css" />
     <Content Include="styles\MeetTheTeam.css" />
+    <Content Include="styles\page.css" />
     <Content Include="styles\Site.css" />
     <Content Include="Web.config" />
   </ItemGroup>
