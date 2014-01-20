@@ -47,7 +47,10 @@ Signature.Expo.MobileStie/bin/Signature.ARCodes.dll
 Signature.Expo.MobileStie/bin/Signature.ARCodes.pdb
 Signature.Expo.MobileStie/bin/Signature.Expo.MobileSite.dll
 Signature.Expo.MobileStie/bin/Signature.Expo.MobileSite.pdb
-
+Signature.Expo.MobileStie/obj/Debug/*.cache
+Signature.Expo.MobileStie/obj/Debug/*.dll
+Signature.Expo.MobileStie/obj/Debug/*.pdb
+Signature.Expo.MobileStie/obj/Debug/*
 
 
 
