@@ -1,0 +1,36 @@
+﻿<div id="guess-tile-builder">
+    <!-- Content Goes Here -->
+</div>
+
+<script type="text/javascript">
+    var string = "";
+    string += "" +
+        "<section class=\"cards\">" +
+            "<article class=\"col\">" +
+                "<img id=\"gtImage\" src=\"\">" +
+				"<div class=\"cushion\" style=\"margin-top: -200px; background: rgba(255,255,255,0.5);\">" +
+                    "<h3 id=\"gtName\"></h3>" +
+					"<p id=\"gtTeamName\" class=\"meta\"></p>" +
+                    //"<p id=\"gtPosition\" class=\"meta\"></p>" +
+					//"<p>DESCRIPTION</p>" +
+					"<p class=\"about-contacts\">" +
+                        "<select style=\"width: 100%;\" id=\"guessbox\" class=\"guessbox\" answer=\"\">";
+    for (var j = 0; j < $.configuration.getAnswerKey().length; j++) {
+        string += "" +
+                            "<option>" + $.configuration.getAnswerKey()[j] + "</option>";
+    }
+    string += "" +
+                        "</select>";
+    //"<input type=\"text\" style=\"width: 100%;\" class=\"guessbox\" placeholder=\"What's my favorite drink?\" answer=\"" + $.configuration.getTeam()[i].answer + "\" />" +
+    string += "" +
+                    "</p>" +
+                    "<p>" +
+                        "<a href=\"#\" id=\"guessbutton\" class=\"button blue big\">submit</a>" +
+                        "<a href=\"#\" id=\"guessbutton\" class=\"button blue big\">cancel</a>" +
+                    "</p>" +
+				"</div>" +
+			"</article>" +
+		"</section>";
+    $("#guess-tile-builder").append(string);
+</script>
+

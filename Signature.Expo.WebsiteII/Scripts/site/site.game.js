@@ -4,10 +4,9 @@
  *
  */
 (function($) {
-	$.configuration = {
+	$.game = {
         // Instantiate Global Variables
-	    _team: null,
-        _unlocked: false,
+	    _currentId: null,
 
 
 
@@ -15,26 +14,45 @@
          * Returns the value of Team
          */
 		initialize: function () {
-		    if (this._team == null) {
-		        $.ajax({
-		            type: "GET",
-		            dataType: "json",
-		            contentType: "application/json; charset=utf-8",
-		            url: "json/team.json",
-		            success: function (data) {
-		                $.configuration._team = JSON.parse(JSON.stringify(data));
-		            }
-		        });
-		    }
+		    $.game.events();
 		},
+
+
+
+	    /**
+         * Returns the value of Team
+         */
+		getCurrentId: function () {
+		    return $.game._currentId;
+		},
+	    /**
+         * Returns the value of Team
+         */
+		setCurrentId: function (id) {
+		    $.game._currentId = id;
+		},
+
+
 
 
 
         /**
          * Returns the value of Team
          */
-		getTeam: function() {
-		    return $.configuration._team;
+		generateGuessTile: function (id) {
+		    // Set Current Id
+		    $.game.setCurrentId(id);
+
+		    // Loop through team members
+		    for (var i = 0; i < $.configuration.getTeam().length; i++) {
+		        if (($.configuration.getTeam()[i].id + "") == $.game.getCurrentId()) {
+		            $("#gtImage").attr("src", "images/" + $.configuration.getTeam()[i].image[1]);
+		            $("#gtName").text($.configuration.getTeam()[i].name);
+		            $("#gtTeamName").text($.configuration.getTeam()[i].teamname + " | " + $.configuration.getTeam()[i].position);
+		            //$("#gtPosition").text($.configuration.getTeam()[i].position);
+		            $("#guessbox").attr("answer", $.configuration.getTeam()[i].answer);
+		        }
+		    }
 		},
         
 
@@ -42,8 +60,18 @@
 	    /**
          * Returns the value of Team
          */
-	    getUnlocked: function() {
-	        return $.configuration._unlocked;
+		events: function () {
+	        $(".tiletoguess").click(function () {
+	            $("#GuessingTileContainer").show();
+	            $("#GameStatusContainer").hide();
+	            $.game.generateGuessTile($(this).attr("member-id"));
+	           
+	        });
+
+
+	        $("#guessbutton").click(function () {
+
+	        });
 	    }
 	}
 })(jQuery);

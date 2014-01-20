@@ -1,0 +1,37 @@
+﻿<div id="tile-builder">
+    <!-- Content Goes Here -->
+</div>
+
+<script type="text/javascript">
+    // Instantiate Variables
+    var isNewSection = true;
+    var counter = 0;
+
+    // Loop through team members
+    for (var i = 0; i < $.configuration.getTeam().length; i++) {
+        
+        // Start New Section
+        if (isNewSection) {
+            $("#tile-builder").append("<section class=\"split4 cards current\" id=\"tileholders\"></section>");
+            isNewSection = false;
+        }
+
+        var string = "";
+        string += "" +
+            "<article class=\"col" + ((counter == 0) ? " first" : "") + " tiletoguess\" style=\"margin-bottom: 10px; cursor: pointer;\" member-id=\"" + $.configuration.getTeam()[i].id + "\">" +
+                "<img class=\"mouseoff\" src=\"images/" + $.configuration.getTeam()[i].image[0] + "\">" +
+                "<img class=\"mouseon\" src=\"images/" + $.configuration.getTeam()[i].image[1] + "\">" +
+			"</article>" +
+			"";
+        $("#tileholders.current").append(string);
+
+        // End Section or Increase Counter
+        counter++;
+        if (counter == 6 || i == ($.configuration.getTeam().length - 1)) {
+            counter = 0;
+            isNewSection = true;
+            $("#tileholders.current").removeClass("current");
+        }
+    }
+</script>
+

@@ -30,8 +30,11 @@
                         "<select style=\"width: 100%;\" class=\"guessbox\" answer=\"" + $.configuration.getTeam()[i].answer + "\">";
 
         for (var j = 0; j < $.configuration.getAnswerKey().length; j++) {
-            string += "<option>" + $.configuration.getAnswerKey()[j] + "</option>";
+            string += "" +
+                            "<option>" + $.configuration.getAnswerKey()[j] + "</option>";
         }
+        string += "" +
+                        "</select>";
                                     //"<input type=\"text\" style=\"width: 100%;\" class=\"guessbox\" placeholder=\"What's my favorite drink?\" answer=\"" + $.configuration.getTeam()[i].answer + "\" />" +
         string += "" +
                     "</p>" +

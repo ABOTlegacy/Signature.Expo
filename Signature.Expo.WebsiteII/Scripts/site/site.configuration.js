@@ -9,6 +9,7 @@
 	    _team: null,
 	    _unlocked: null,
 	    _answerKey: null,
+        _expire: null,
 
 
 
@@ -18,15 +19,23 @@
          * Returns the value of Team
          */
 	    initialize: function () {
+	        // Set Expire Date
+	        if ($.configuration.getExpire() == null) {
+	            var now = new Date();
+	            var expiresDate = new Date();
+	            expiresDate.setDate(now.getDate() + 10);
+	            $.configuration.setExpire(expiresDate);
+	        }
+	        
             // Initialize Team List
-		    if ($.configuration._team == null) {
+		    if ($.configuration.getTeam() == null) {
 		        $.ajax({
 		            type: "GET",
 		            dataType: "json",
 		            contentType: "application/json; charset=utf-8",
 		            url: "json/team.json",
 		            success: function (data) {
-		                $.configuration._team = JSON.parse(JSON.stringify(data));
+		                $.configuration.setTeam(JSON.parse(JSON.stringify(data)));
 
 
 		                // Initialize Answer Key
@@ -48,10 +57,32 @@
 		    }
 
 	        // Initialize Unlocked
-		    if($.configuration._unlocked == null) {
+		    if($.configuration.getUnlocked() == null) {
 		        $.configuration.setUnlocked("false");
 		    }
 		},
+
+
+
+
+
+	    /**
+         * Returns the value of Expire
+         */
+	    getExpire: function() {
+	        if ($.configuration._expire == null) {
+	            $.configuration._expire = JSON.parse($.cookie('ABOT-MTT-expire'));
+	        }
+	        return $.configuration._expire;
+	    },
+
+	    /**
+         * Sets the Team Value
+         */
+	    setExpire: function (expire) {
+	        $.configuration._expire = expire;
+	        $.cookie('ABOT-MTT-expire', JSON.stringify(expire), { path: '/', expires: $.configuration.getExpire() });
+	    },
 
 
 
@@ -61,9 +92,20 @@
          * Returns the value of Team
          */
 		getTeam: function() {
+		    if ($.configuration._team == null) {
+		        $.configuration._team = JSON.parse($.cookie('ABOT-MTT-team'));
+		    }
 		    return $.configuration._team;
 		},
-        
+
+	    /**
+         * Sets the Team Value
+         */
+		setTeam: function (team) {
+		    $.configuration._team = team;
+		    $.cookie('ABOT-MTT-team', JSON.stringify(team), { path: '/', expires: $.configuration.getExpire() });
+		},
+
 
 
 
@@ -83,7 +125,7 @@
          */
 	    setUnlocked: function (unlocked) {
 	        $.configuration._unlocked = unlocked;
-	        $.cookie('ABOT-MTT-unlocked', unlocked, { path: '/' });
+	        $.cookie('ABOT-MTT-unlocked', unlocked, { path: '/', expires: $.configuration.getExpire() });
 	    },
 
 
@@ -95,7 +137,7 @@
          */
 	    getAnswerKey: function () {
 	        if ($.configuration._answerKey == null) {
-	            $.configuration._answerKey = $.cookie('ABOT-MTT-answerkey');
+	            $.configuration._answerKey = JSON.parse($.cookie('ABOT-MTT-answerkey'));
 	        }
 	        return $.configuration._answerKey;
 	    },
@@ -105,7 +147,7 @@
          */
 	    setAnswerKey: function (answerKey) {
 	        $.configuration._answerKey = answerKey;
-	        $.cookie('ABOT-MTT-answerkey', answerKey, { path: '/' });
+	        $.cookie('ABOT-MTT-answerkey', JSON.stringify(answerKey), { path: '/', expires: $.configuration.getExpire() });
 	    }
 	}
 })(jQuery);
