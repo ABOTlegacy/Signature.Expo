@@ -27,7 +27,7 @@
 
 
 	    /**
-         * @TODO
+         * Main Front Page
          */
 		main: function () {
 		    $("body").empty().load("html/site.frontpage.html");

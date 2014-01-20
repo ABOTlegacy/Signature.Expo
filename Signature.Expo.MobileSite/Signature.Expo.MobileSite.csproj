@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Signature.ARCodes</RootNamespace>
-    <AssemblyName>Signature.ARCodes</AssemblyName>
+    <RootNamespace>Signature.Expo.MobileSite</RootNamespace>
+    <AssemblyName>Signature.Expo.MobileSite</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -57,9 +57,21 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\style.css" />
     <Content Include="html\site.progress.item.html" />
     <Content Include="html\site.progress.html" />
     <Content Include="html\site.start.html" />
+    <Content Include="images\banner.jpg" />
+    <Content Include="images\crazystraw.jpg" />
+    <Content Include="images\crazystraw_bw.jpg" />
+    <Content Include="images\drink background.jpg" />
+    <Content Include="images\drink.jpg" />
+    <Content Include="images\drink_bw.jpg" />
+    <Content Include="images\equation.jpg" />
+    <Content Include="images\laie.jpg" />
+    <Content Include="images\laie_bw.jpg" />
+    <Content Include="images\umbrella.jpg" />
+    <Content Include="images\umbrella_bw.jpg" />
     <Content Include="index.html" />
     <None Include="json\rewards.json" />
     <Content Include="scripts\jquery\jquery-1.9.1.js" />
