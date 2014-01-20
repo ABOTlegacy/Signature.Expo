@@ -58,6 +58,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="game.html" />
+    <Content Include="html\GuessingTile.html" />
+    <Content Include="html\GameStats.html" />
+    <Content Include="html\SmallTiles.html" />
     <Content Include="html\GameTiles.html" />
     <Content Include="reward.html" />
     <Content Include="instructions.html" />
