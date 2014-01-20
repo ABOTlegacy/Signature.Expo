@@ -58,6 +58,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\style.css" />
+    <Content Include="html\site.checklist.html" />
+    <Content Include="html\site.congrats.html" />
+    <Content Include="html\site.frontpage.html" />
     <Content Include="html\site.progress.item.html" />
     <Content Include="html\site.progress.html" />
     <Content Include="html\site.start.html" />
