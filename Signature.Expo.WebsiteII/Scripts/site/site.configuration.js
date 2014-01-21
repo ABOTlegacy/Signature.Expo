@@ -9,7 +9,8 @@
 	    _team: null,
 	    _unlocked: null,
 	    _answerKey: null,
-        _expire: null,
+	    _expire: null,
+        _correctAnswers: null,
 
 
 
@@ -60,6 +61,11 @@
 		    if($.configuration.getUnlocked() == null) {
 		        $.configuration.setUnlocked("false");
 		    }
+
+	        // Initialize Unlocked
+		    if ($.configuration.getCorrectAnswers() == null) {
+		        $.configuration.setCorrectAnswers([]);
+		    }
 		},
 
 
@@ -84,7 +90,7 @@
 	        $.cookie('ABOT-MTT-expire', JSON.stringify(expire), { path: '/', expires: $.configuration.getExpire() });
 	    },
 
-
+        
 
 
 
@@ -148,6 +154,27 @@
 	    setAnswerKey: function (answerKey) {
 	        $.configuration._answerKey = answerKey;
 	        $.cookie('ABOT-MTT-answerkey', JSON.stringify(answerKey), { path: '/', expires: $.configuration.getExpire() });
+	    },
+
+
+
+
+	    /**
+         * Returns the value of Correct Answers
+         */
+	    getCorrectAnswers: function () {
+	        if ($.configuration._correctAnswers == null) {
+	            $.configuration._correctAnswers = JSON.parse($.cookie('ABOT-MTT-correctanswers'));
+	        }
+	        return $.configuration._correctAnswers;
+	    },
+
+        /**
+         * Sets the Correct Answers
+         */
+        setCorrectAnswers: function (correctAnswers) {
+            $.configuration._correctAnswers = correctAnswers;
+            $.cookie('ABOT-MTT-correctanswers', JSON.stringify(correctAnswers), { path: '/', expires: $.configuration.getExpire() });
 	    }
 	}
 })(jQuery);
