@@ -18,7 +18,8 @@
 
         var string = "";
         string += "" +
-            "<article class=\"col" + ((counter == 0) ? " first" : "") + " tiletoguess\" style=\"margin-bottom: 10px; cursor: pointer;\" member-id=\"" + $.configuration.getTeam()[i].id + "\">" +
+            "<article class=\"col" + ((counter == 0) ? " first" : "") + " tiletoguess enabled\" style=\"margin-bottom: 10px; position: relative;\" member-id=\"" + $.configuration.getTeam()[i].id + "\">" +
+                "<div class=\"visualque\"></div>" +
                 "<img class=\"mouseoff\" src=\"images/" + $.configuration.getTeam()[i].image[0] + "\">" +
                 "<img class=\"mouseon\" src=\"images/" + $.configuration.getTeam()[i].image[1] + "\">" +
 			"</article>" +

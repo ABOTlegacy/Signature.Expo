@@ -43,14 +43,22 @@ Thumbs.db
 ############################
 
 # Signature.Expo.MobileSite
-Signature.Expo.MobileStie/bin/Signature.ARCodes.dll
-Signature.Expo.MobileStie/bin/Signature.ARCodes.pdb
-Signature.Expo.MobileStie/bin/Signature.Expo.MobileSite.dll
-Signature.Expo.MobileStie/bin/Signature.Expo.MobileSite.pdb
-Signature.Expo.MobileStie/obj/Debug/*.cache
-Signature.Expo.MobileStie/obj/Debug/*.dll
-Signature.Expo.MobileStie/obj/Debug/*.pdb
-Signature.Expo.MobileStie/obj/Debug/*
+Signature.Expo.MobileSite/bin/Signature.ARCodes.dll
+Signature.Expo.MobileSite/bin/Signature.ARCodes.pdb
+Signature.Expo.MobileSite/bin/Signature.Expo.MobileSite.dll
+Signature.Expo.MobileSite/bin/Signature.Expo.MobileSite.pdb
+Signature.Expo.MobileSite/obj/Debug/*.cache
+Signature.Expo.MobileSite/obj/Debug/*.dll
+Signature.Expo.MobileSite/obj/Debug/*.pdb
+Signature.Expo.MobileSite/obj/Debug/*
+
+# Signature.Expo.WebsiteII
+Signature.Expo.WebsiteII/bin/*.dll
+Signature.Expo.WebsiteII/bin/*.pdb
+Signature.Expo.WebsiteII/obj/Debug/*.cache
+Signature.Expo.WebsiteII/obj/Debug/*.dll
+Signature.Expo.WebsiteII/obj/Debug/*.pdb
+Signature.Expo.WebsiteII/obj/Debug/*
 
 
 

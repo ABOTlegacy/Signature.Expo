@@ -21,15 +21,15 @@
          */
 	    initialize: function () {
 	        // Set Expire Date
-	        if ($.configuration.getExpire() == null) {
+	        //if ($.configuration.getExpire() == null) {
 	            var now = new Date();
 	            var expiresDate = new Date();
 	            expiresDate.setDate(now.getDate() + 10);
 	            $.configuration.setExpire(expiresDate);
-	        }
+	        //}
 	        
             // Initialize Team List
-		    if ($.configuration.getTeam() == null) {
+		    //if ($.configuration.getTeam() == null) {
 		        $.ajax({
 		            type: "GET",
 		            dataType: "json",
@@ -37,7 +37,6 @@
 		            url: "json/team.json",
 		            success: function (data) {
 		                $.configuration.setTeam(JSON.parse(JSON.stringify(data)));
-
 
 		                // Initialize Answer Key
 		                var answerArray = new Array();
@@ -55,17 +54,17 @@
 		                $.configuration.setAnswerKey(answerArray.sort());
 		            }
 		        });
-		    }
+		    //}
 
 	        // Initialize Unlocked
-		    if($.configuration.getUnlocked() == null) {
+		    //if($.configuration.getUnlocked() == null) {
 		        $.configuration.setUnlocked("false");
-		    }
+		    //}
 
-	        // Initialize Unlocked
-		    if ($.configuration.getCorrectAnswers() == null) {
+	        // Initialize Correct Answers
+		    //if ($.configuration.getCorrectAnswers() == null) {
 		        $.configuration.setCorrectAnswers([]);
-		    }
+		    //}
 		},
 
 
@@ -77,7 +76,7 @@
          */
 	    getExpire: function() {
 	        if ($.configuration._expire == null) {
-	            $.configuration._expire = JSON.parse($.cookie('ABOT-MTT-expire'));
+	            $.configuration._expire = new Date(JSON.parse($.cookie('ABOT-MTT-expire')));
 	        }
 	        return $.configuration._expire;
 	    },

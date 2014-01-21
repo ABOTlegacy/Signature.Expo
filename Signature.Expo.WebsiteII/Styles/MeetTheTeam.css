@@ -1,16 +1,45 @@
-﻿div.wrap section.cards article:hover > img.mouseoff {
+﻿div.wrap section.cards article.enabled:hover > img.mouseoff {
     display: none;
 }
-div.wrap section.cards article > img.mouseoff {
+div.wrap section.cards article.enabled > img.mouseoff {
     display: block;
 }
 
 
-div.wrap section.cards article:hover > img.mouseon {
+div.wrap section.cards article.enabled:hover > img.mouseon {
     display: block;
 }
+div.wrap section.cards article.enabled > img.mouseon {
+    display: none;
+}
+
+
 div.wrap section.cards article > img.mouseon {
     display: none;
+}
+div.wrap section.cards article > img.mouseff {
+    display: block;
+}
+
+
+
+
+
+.enabled {
+    cursor: pointer;
+}
+.visualque {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+article.wrong > div.visualque {
+    background: rgba(255, 0, 0, 0.25);
+}
+article.correct > div.visualque {
+    background: rgba(0, 255, 33, 0.25);
 }
 
 
@@ -26,3 +55,20 @@ li{
   margin: 0px 0px 0px 0px;
 }
 #double li  { width: 50%;}
+
+
+
+
+
+/* Game Styles */
+.game-stats-card {
+    float: left;
+    width: 25%;
+    margin: 0px 5% 0px 5%;
+}
+.game-stats-card.first {
+    margin-left: 0px;
+}
+.game-stats-card.last {
+    margin-right: 0px;
+}
