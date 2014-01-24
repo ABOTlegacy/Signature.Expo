@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Meta Files -->
+    <meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1'>
+    <meta http-equiv='X-UA-Compatible' content='chrome=1' />
+
+    <!-- Title -->
+    <title>Signature.AugmentedReality</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/site.css" type="text/css" />
+    <link rel="stylesheet" href="styles/site.customData.css" type="text/css" />
+
+    <!-- Script Files -->
+    <script src="scripts/jquery/jquery-1.9.1.js"></script>
+    <script src="scripts/json/json2.js"></script>
+    <script src="scripts/typeface/typeface-0.15.js"></script>
+
+    <!-- Set Debug to false -->
+    <script>
+        DEBUG = false;
+    </script>
+</head>
+<body>
+    <!-- Camera Controls -->
+    <div id="camera-controls-container">
+        <div class='select'>
+            <label for='audioSource'>Audio source: </label><select id='audioSource'></select>
+        </div>
+        <div class='select'>
+            <label for='videoSource'>Video source: </label><select id='videoSource'></select>
+        </div>
+<!--        <div class='select'>
+            <label for='resolutionSource'>Resolution: </label>
+            <select id='resolutionSource'>
+                <option value="640x480">640x480</option>
+                <option value="960x720">960x720</option>
+                <option value="1280x720">1280x720</option>
+
+            </select>
+        </div>-->
+        <div class='select'>
+            <label for='videoSource'>Selected Mesh: </label><input type="text" id='txtSelectedMesh'></input>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div id='main-container'>
+        <video muted autoplay controls id="control-video" class="video-canvas" style="display: none;"></video>
+        <canvas style="-webkit-transform: scale(-1, 1); display: none;" id="ABOT-CANVAS" class="video-canvas"></canvas>
+        <canvas style="-webkit-transform: scale(-1, 1); display: none;" id="ABOT-DEBUG-CANVAS" class="video-canvas"></canvas>
+    </div>
+
+    <!-- Custom Data -->
+    <div id="custom-data-container">
+        <div class="custom-data" id="cd32">
+            <h1>Beachball</h1>
+        </div>
+    </div>
+
+    <!-- Script Files must be loaded here -->
+    <script src='scripts/webcam/main.js'></script>
+    <script src='scripts/three/three.js'></script>
+    <script src='scripts/site/site.three.touchevents.js'></script>
+    <script src='scripts/site/site.ar.customData.js'></script>
+
+    <!-- Typefaces -->
+    <script src="fonts/gentilis_bold.typeface.js"></script>
+    <script src="fonts/gentilis_regular.typeface.js"></script>
+    <script src="fonts/optimer_bold.typeface.js"></script>
+    <script src="fonts/optimer_regular.typeface.js"></script>
+    <script src="fonts/helvetiker_bold.typeface.js"></script>
+    <script src="fonts/helvetiker_regular.typeface.js"></script>
+    <script src="fonts/droid_sans_regular.typeface.js"></script>
+    <script src="fonts/droid_serif_regular.typeface.js"></script>
+    <script src="fonts/droid_serif_bold.typeface.js"></script>
+
+    <!-- The AR / Three Library -->
+    <script data-main="scripts/abrie/application.js" src="scripts/require/require.js"></script>
+</body>
+</html>

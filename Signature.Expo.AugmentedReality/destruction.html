@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta name='keywords' content='Sam Dutton, HTML5, JavaScript' />
+<meta name='description' content='Simplest possible examples of HTML, CSS and JavaScript.' />
+<meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='chrome=1' />
+<base target='_blank'>
+<title>MediaStreamTrack.getSources()</title>
+
+<script src="scripts/jquery/jquery-1.9.1.js"></script>
+<script src="scripts/json/json2.js"></script>
+
+<style>
+    div.select {
+        margin: 0 0 1em 0;
+    }
+    label {
+        color: white;
+    }
+</style>
+
+
+
+<style>
+  html {
+    background: black;
+    color: white;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    text-align: center;
+  }
+  #loading {
+    font-size: 80px;
+    font-weight: bold;
+    font-family: Times;
+  }
+</style>
+
+</head>
+<body>
+<div id='container'>
+    <h1><a href='../../index.html' title='simpl.info home page'>simpl.info</a> MediaStreamTrack.getSources</h1>
+    <div class='select'>
+        <label for='audioSource'>Audio source: </label><select id='audioSource'></select>
+    </div>
+    <div class='select'>
+        <label for='videoSource'>Video source: </label><select id='videoSource'></select>
+    </div>
+    <video muted autoplay controls id="control-video"></video>
+    <canvas width="320" height="320" style="-webkit-transform: scale(-1, 1);"></canvas>
+</div>
+
+
+
+
+
+    
+<!--scREIPTS-->
+<script src='js/main.js'></script>
+<script src="ar_js/JSARToolKit.js"></script>
+<script src="ar_js/magi.js"></script>
+<script src="ar_js/utils.js"></script>
+<script src="ar_js/photos.js"></script>
+<script>
+    // Random Variables and Maps the Images
+    threshold = 128;
+    DEBUG = false;
+    photos = Photos.map(Image.load);
+
+
+    // Video Variable
+    var video = document.getElementById('control-video');
+    video.width = 640;
+    video.height = 480;
+    video.loop = true;
+    video.volume = 0;
+    video.autoplay = true;
+    video.controls = true;
+
+
+
+
+   // window.onload = function () {
+
+        // Canvas Element
+        var canvas = document.createElement('canvas');
+        canvas.width = 320;
+        canvas.height = 240;
+        canvas.style.display = 'block';
+        canvas.id = "BATMAN-CANVAS";
+
+
+        // Video Canvas
+        var videoCanvas = document.createElement('canvas');
+        videoCanvas.width = video.width;
+        videoCanvas.height = video.height;
+        videoCanvas.id = "BATMAN-VIDEO";
+        
+
+        // AR Stuff
+        var raster = new NyARRgbRaster_Canvas2D(canvas);
+        var param = new FLARParam(320, 240);
+        var resultMat = new NyARTransMatResult();
+        var detector = new FLARMultiIdMarkerDetector(param, 120);
+        detector.setContinueMode(true);
+        
+
+        // CTX for canvas
+        var ctx = canvas.getContext('2d');
+        //ctx.font = "24px URW Gothic L, Arial, Sans-serif";
+
+
+
+        // GL Canvas
+        var glCanvas = document.createElement('canvas');
+        glCanvas.style.webkitTransform = 'scale(-1.0, 1.0)';
+        glCanvas.width = 320;
+        glCanvas.height = 320;
+        glCanvas.id = "BATMAN-GL";
+        var s = glCanvas.style;
+        document.body.appendChild(glCanvas);
+
+        // GL CTX
+        var glctx = glCanvas.getContext('2d');
+        
+        // Display And AR Code
+        //display = new Magi.Scene(glCanvas);
+        //display.drawOnlyWhenChanged = true;
+        //param.copyCameraMatrix(display.camera.perspectiveMatrix, 10, 10000);
+        //display.camera.useProjectionMatrix = true;
+        //var videoTex = new Magi.FlipFilterQuad();
+        //videoTex.material.textures.Texture0 = new Magi.Texture();
+        //videoTex.material.textures.Texture0.image = videoCanvas;
+        //videoTex.material.textures.Texture0.generateMipmaps = false;
+        //display.scene.appendChild(videoTex);
+        
+
+        // Random Variables
+        var times = [];
+        var pastResults = {};
+        var lastTime = 0;
+        var cubes = {};
+        var images = [];
+
+
+
+        //window.updateImage = function () {
+        //    display.changed = true;
+        //}
+ 
+
+
+        // Updates the Canvas
+        setInterval(function () {
+
+            lastTime = video.currentTime;
+            videoCanvas.getContext('2d').drawImage(video, 0, 0);
+            ctx.drawImage(videoCanvas, 0, 0, 320, 240);
+            var dt = new Date().getTime();
+
+            //videoTex.material.textures.Texture0.changed = true;
+
+            //canvas.changed = true;
+            //display.changed = true;
+        }, 1000);
+
+   // }
+</script>
+
+
+
+
+</body>
+</html>

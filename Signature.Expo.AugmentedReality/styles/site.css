@@ -1,0 +1,40 @@
+﻿/* Reset */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, font, img {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+
+
+/* Main Elements */
+body {
+    background: #1b7bbf url("../site_files/Background04.png") no-repeat;
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    color: #696969;
+    padding-top: 10px;
+}
+
+
+
+/* Camera Controls Container */
+#camera-controls-container {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+}
+
+
+
+/* Main Container */
+#main-container {
+    margin: 0px auto;
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+}

@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B54C0BD2-B817-42D0-BE29-B499F568CD15}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Signature.Expo.AugmentedReality</RootNamespace>
+    <AssemblyName>Signature.Expo.AugmentedReality</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="application.html" />
+    <Content Include="ar_imgs\2362652089_baaa1958d0_z.jpg" />
+    <Content Include="ar_imgs\2362676389_b0a145fce4_z.jpg" />
+    <Content Include="ar_imgs\2414463667_a173b81c3b_z.jpg" />
+    <Content Include="ar_imgs\2414466051_4a0c1b3617_z.jpg" />
+    <Content Include="ar_imgs\2430707122_df6e2b7c82_z.jpg" />
+    <Content Include="ar_imgs\2430716428_df5b41dd30_z.jpg" />
+    <Content Include="ar_imgs\2430719114_709bc64042_z.jpg" />
+    <Content Include="ar_imgs\2430721656_a16e70e1fa_z.jpg" />
+    <Content Include="ar_imgs\2484315925_4d47b261d0_z.jpg" />
+    <Content Include="ar_imgs\2484327283_c6bbd619c7_z.jpg" />
+    <Content Include="ar_imgs\2532453477_a3eeb02e40_z.jpg" />
+    <Content Include="ar_imgs\2554617303_ed7e668c24_z.jpg" />
+    <Content Include="ar_imgs\2555451906_9266de66fb_z.jpg" />
+    <Content Include="ar_imgs\2582668178_0cb5bc3524_z.jpg" />
+    <Content Include="ar_imgs\2633061658_66c1ef1d75_z.jpg" />
+    <Content Include="ar_imgs\2925126967_7ee0fabf0e_z.jpg" />
+    <Content Include="ar_imgs\2925128257_14e7db9032_z.jpg" />
+    <Content Include="ar_imgs\2925132353_cc796f58d9_z.jpg" />
+    <Content Include="ar_imgs\2925133991_e476527b9c_z.jpg" />
+    <Content Include="ar_imgs\2925984626_bf837a9c7e_z.jpg" />
+    <Content Include="ar_js\cThree.js" />
+    <Content Include="markers\0.png" />
+    <Content Include="markers\1.png" />
+    <Content Include="markers\10.png" />
+    <Content Include="markers\11.png" />
+    <Content Include="markers\12.png" />
+    <Content Include="markers\13.png" />
+    <Content Include="markers\14.png" />
+    <Content Include="markers\15.png" />
+    <Content Include="markers\16.png" />
+    <Content Include="markers\17.png" />
+    <Content Include="markers\18.png" />
+    <Content Include="markers\19.png" />
+    <Content Include="markers\2.png" />
+    <Content Include="markers\20.png" />
+    <Content Include="markers\21.png" />
+    <Content Include="markers\22.png" />
+    <Content Include="markers\23.png" />
+    <Content Include="markers\24.png" />
+    <Content Include="markers\25.png" />
+    <Content Include="markers\26.png" />
+    <Content Include="markers\27.png" />
+    <Content Include="markers\28.png" />
+    <Content Include="markers\29.png" />
+    <Content Include="markers\3.png" />
+    <Content Include="markers\30.png" />
+    <Content Include="markers\31.png" />
+    <Content Include="markers\32.png" />
+    <Content Include="markers\33.png" />
+    <Content Include="markers\34.png" />
+    <Content Include="markers\35.png" />
+    <Content Include="markers\36.png" />
+    <Content Include="markers\37.png" />
+    <Content Include="markers\38.png" />
+    <Content Include="markers\39.png" />
+    <Content Include="markers\4.png" />
+    <Content Include="markers\40.png" />
+    <Content Include="markers\41.png" />
+    <Content Include="markers\42.png" />
+    <Content Include="markers\43.png" />
+    <Content Include="markers\44.png" />
+    <Content Include="markers\45.png" />
+    <Content Include="markers\46.png" />
+    <Content Include="markers\47.png" />
+    <Content Include="markers\48.png" />
+    <Content Include="markers\49.png" />
+    <Content Include="markers\5.png" />
+    <Content Include="markers\50.png" />
+    <Content Include="markers\51.png" />
+    <Content Include="markers\52.png" />
+    <Content Include="markers\53.png" />
+    <Content Include="markers\54.png" />
+    <Content Include="markers\55.png" />
+    <Content Include="markers\56.png" />
+    <Content Include="markers\57.png" />
+    <Content Include="markers\58.png" />
+    <Content Include="markers\59.png" />
+    <Content Include="markers\6.png" />
+    <Content Include="markers\60.png" />
+    <Content Include="markers\61.png" />
+    <Content Include="markers\62.png" />
+    <Content Include="markers\63.png" />
+    <Content Include="markers\64.png" />
+    <Content Include="markers\65.png" />
+    <Content Include="markers\66.png" />
+    <Content Include="markers\67.png" />
+    <Content Include="markers\68.png" />
+    <Content Include="markers\69.png" />
+    <Content Include="markers\7.png" />
+    <Content Include="markers\70.png" />
+    <Content Include="markers\71.png" />
+    <Content Include="markers\72.png" />
+    <Content Include="markers\73.png" />
+    <Content Include="markers\74.png" />
+    <Content Include="markers\75.png" />
+    <Content Include="markers\76.png" />
+    <Content Include="markers\77.png" />
+    <Content Include="markers\78.png" />
+    <Content Include="markers\79.png" />
+    <Content Include="markers\8.png" />
+    <Content Include="markers\80.png" />
+    <Content Include="markers\81.png" />
+    <Content Include="markers\82.png" />
+    <Content Include="markers\83.png" />
+    <Content Include="markers\84.png" />
+    <Content Include="markers\85.png" />
+    <Content Include="markers\86.png" />
+    <Content Include="markers\87.png" />
+    <Content Include="markers\88.png" />
+    <Content Include="markers\89.png" />
+    <Content Include="markers\9.png" />
+    <Content Include="markers\90.png" />
+    <Content Include="markers\91.png" />
+    <Content Include="markers\92.png" />
+    <Content Include="markers\93.png" />
+    <Content Include="markers\94.png" />
+    <Content Include="markers\95.png" />
+    <Content Include="markers\96.png" />
+    <Content Include="markers\97.png" />
+    <Content Include="markers\98.png" />
+    <Content Include="markers\99.png" />
+    <Content Include="scripts\abrie\application.js" />
+    <Content Include="scripts\abrie\ardetector.js" />
+    <Content Include="scripts\abrie\arobject.js" />
+    <Content Include="scripts\abrie\arview.js" />
+    <Content Include="scripts\require\require.js" />
+    <Content Include="scripts\abrie\webcam.js" />
+    <Content Include="scripts\ar\JSARToolKit.js" />
+    <Content Include="ar_js\magi.js" />
+    <Content Include="ar_js\photos.js" />
+    <Content Include="scripts\three\threex.domevent.object3d.js" />
+    <Content Include="scripts\three\three.js" />
+    <Content Include="ar_js\three.min.js" />
+    <Content Include="ar_js\threex.jsartoolkit.js" />
+    <Content Include="ar_js\utils.js" />
+    <Content Include="compatible.html" />
+    <Content Include="firstdraft.html" />
+    <Content Include="fonts\droid_sans_bold.typeface.js" />
+    <Content Include="fonts\droid_sans_regular.typeface.js" />
+    <Content Include="fonts\droid_serif_bold.typeface.js" />
+    <Content Include="fonts\droid_serif_regular.typeface.js" />
+    <Content Include="fonts\gentilis_bold.typeface.js" />
+    <Content Include="fonts\gentilis_regular.typeface.js" />
+    <Content Include="fonts\helvetiker_bold.typeface.js" />
+    <Content Include="fonts\helvetiker_regular.typeface.js" />
+    <Content Include="fonts\optimer_bold.typeface.js" />
+    <Content Include="fonts\optimer_regular.typeface.js" />
+    <Content Include="scripts\site\site.three.touchevents.js" />
+    <Content Include="scripts\site\site.ar.initialize.js" />
+    <Content Include="scripts\three\threex.domevent.js" />
+    <Content Include="scripts\three\TrackballControls.js" />
+    <Content Include="scripts\typeface\typeface-0.15.js" />
+    <Content Include="scripts\jquery\jquery-1.9.1.js" />
+    <Content Include="scripts\jquery\jquery-ui-1.8.6.custom.js" />
+    <Content Include="scripts\jquery\jquery.cookie.js" />
+    <Content Include="scripts\jquery\jquery.urldecoder.js" />
+    <Content Include="scripts\json\json2.js" />
+    <Content Include="site_files\Background04.png" />
+    <Content Include="styles\site.css" />
+    <Content Include="three.html" />
+    <Content Include="destruction.html" />
+    <Content Include="improved.html" />
+    <Content Include="workingseperately.html" />
+    <Content Include="index.html" />
+    <Content Include="scripts\webcam\main.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>61155</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:61044/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -47,7 +47,7 @@
 	        $.game.setGameGuesses({ "right": 0, "wrong": 0 });
 
 	        // Update Game Stats
-	        //$.game.updateGameStats();
+	        $.game.updateGameStats();
 		},
 
 

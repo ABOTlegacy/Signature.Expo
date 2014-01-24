@@ -1,0 +1,5 @@
+C:\projects\Signature.Expo\Signature.Expo.AugmentedReality\bin\Signature.Expo.AugmentedReality.dll
+C:\projects\Signature.Expo\Signature.Expo.AugmentedReality\bin\Signature.Expo.AugmentedReality.pdb
+C:\projects\Signature.Expo\Signature.Expo.AugmentedReality\obj\Debug\Signature.Expo.AugmentedReality.csprojResolveAssemblyReference.cache
+C:\projects\Signature.Expo\Signature.Expo.AugmentedReality\obj\Debug\Signature.Expo.AugmentedReality.dll
+C:\projects\Signature.Expo\Signature.Expo.AugmentedReality\obj\Debug\Signature.Expo.AugmentedReality.pdb

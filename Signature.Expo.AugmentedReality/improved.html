@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta name='keywords' content='Sam Dutton, HTML5, JavaScript' />
+<meta name='description' content='Simplest possible examples of HTML, CSS and JavaScript.' />
+<meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='chrome=1' />
+<base target='_blank'>
+<title>MediaStreamTrack.getSources()</title>
+
+<script src="scripts/jquery/jquery-1.9.1.js"></script>
+<script src="scripts/json/json2.js"></script>
+
+<style>
+    div.select {
+        margin: 0 0 1em 0;
+    }
+    label {
+        color: white;
+    }
+</style>
+
+
+
+<style>
+  html {
+    background: black;
+    color: white;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    text-align: center;
+  }
+  #loading {
+    font-size: 80px;
+    font-weight: bold;
+    font-family: Times;
+  }
+</style>
+
+</head>
+<body>
+<div id='container'>
+
+  <h1><a href='../../index.html' title='simpl.info home page'>simpl.info</a> MediaStreamTrack.getSources</h1>
+
+  <div class='select'>
+    <label for='audioSource'>Audio source: </label><select id='audioSource'></select>
+  </div>
+
+  <div class='select'>
+    <label for='videoSource'>Video source: </label><select id='videoSource'></select>
+  </div>
+    <a href="https://googledrive.com/host/0BzvYe7bYFf--dEMzRU8xbFlOTGM/bug.html">fjfjfjj</a>
+  <video muted autoplay controls id="control-video"></video>
+
+
+    
+  <!--  <canvas width="960" height="720" style="-webkit-transform: scale(-1, 1);"></canvas>-->
+
+
+
+  <p>This demo requires Chrome 30 or later.</p>
+
+  <p>For more information, see <a href='http://www.html5rocks.com/en/tutorials/getusermedia/intro/' title='Media capture article by Eric Bidelman on HTML5 Rocks'>Capturing Audio &amp; Video in HTML5</a> on HTML5 Rocks.</p>
+
+<a href='https://github.com/samdutton/simpl/blob/master/getusermedia/sources/js/main.js' title='View source for this page on github' id='viewSource'>View source on github</a>
+</div>
+
+
+    
+
+  <script src='js/main.js'></script>
+    <script src="ar_js/JSARToolKit.js"></script>
+<script src="ar_js/magi.js"></script>
+<script src="ar_js/utils.js"></script>
+<script src="ar_js/photos.js"></script>
+<script>
+    // Other Variables
+    threshold = 128;
+    DEBUG = false;
+    photos = Photos.map(Image.load);
+
+    // Video
+    var video = document.querySelector('video');
+
+
+    // Canvas For AR STuff?
+    var canvas = document.createElement('canvas');
+    canvas.width = 320;
+    canvas.height = 240;
+    canvas.style.display = 'block';
+    canvas.id = "BATMAN-CANVAS";
+
+
+    // Video Canvas
+    var videoCanvas = document.createElement('canvas');
+    videoCanvas.width = video.width;
+    videoCanvas.height = video.height;
+    videoCanvas.id = "BATMAN-VIDEO";
+
+
+    // AR STuff @TODO
+    var raster = new NyARRgbRaster_Canvas2D(canvas);
+    var param = new FLARParam(320, 240);
+    var resultMat = new NyARTransMatResult();
+    var detector = new FLARMultiIdMarkerDetector(param, 120);
+    detector.setContinueMode(true);
+
+    // CTX
+    var ctx = canvas.getContext('2d');
+
+
+    // GL Canvas
+    var glCanvas = document.createElement('canvas');
+    glCanvas.style.webkitTransform = 'scale(-1.0, 1.0)';
+    glCanvas.width = 960;
+    glCanvas.height = 720;
+    glCanvas.id = "BATMAN-GL";
+    var s = glCanvas.style;
+    document.body.appendChild(glCanvas);
+
+
+    // GL CTX
+    var glctx = glCanvas.getContext('2d');
+
+    //// @unknownd Variables
+    //var s = glCanvas.style;
+
+    //?dispaly?
+    display = new Magi.Scene(glCanvas);
+    display.drawOnlyWhenChanged = true;
+    param.copyCameraMatrix(display.camera.perspectiveMatrix, 10, 10000);
+    display.camera.useProjectionMatrix = true;
+    var videoTex = new Magi.FlipFilterQuad();
+    videoTex.material.textures.Texture0 = new Magi.Texture();
+    videoTex.material.textures.Texture0.image = videoCanvas;
+    videoTex.material.textures.Texture0.generateMipmaps = false;
+    display.scene.appendChild(videoTex);
+
+
+    // Random Variables
+    var times = [];
+    var pastResults = {};
+    var lastTime = 0;
+    var cubes = {};
+    var images = [];
+
+
+
+
+
+
+
+
+
+
+
+   // function copytocanvas() {
+
+        (function draw() {
+
+            glctx.drawImage(video, 0, 0, 200, 200);
+
+            requestAnimationFrame(draw);
+        })();
+
+  //  }
+
+</script>
+
+
+
+
+</body>
+</html>
