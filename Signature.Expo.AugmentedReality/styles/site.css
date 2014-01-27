@@ -22,19 +22,45 @@ body {
 
 
 
-/* Camera Controls Container */
-#camera-controls-container {
-    position: fixed;
-    top: 0px;
-    right: 0px;
-}
 
 
 
 /* Main Container */
 #main-container {
     margin: 0px auto;
-    width: 100%;
-    max-width: 900px;
+    width: 640px;
+    /*height: 480px;*/
     text-align: center;
+    position: relative;
+}
+
+
+
+/* Header Container */
+#header-container {
+    margin: 0px auto;
+    width: 900px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+#header-container img {
+    width: 900px;
+}
+
+
+
+/* Description Container */
+#directions-container {
+    margin: 0px auto;
+    width: 900px;
+    /*height: 480px;*/
+    background: #FFFFFF;
+    padding: 20px;
+}
+#directions-container h1 {
+    text-align: center;
+    font-size: 200%;
+}
+#directions-container p {
+    margin-bottom: 10px;
 }

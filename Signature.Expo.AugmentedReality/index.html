@@ -10,47 +10,34 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles/site.css" type="text/css" />
-
-    <!-- Script Files -->
-    <script src="scripts/jquery/jquery-1.9.1.js"></script>
-    <script src="scripts/json/json2.js"></script>
-    <script src="scripts/typeface/typeface-0.15.js"></script>
 </head>
 <body>
     <!-- Camera Controls -->
-    <div id="camera-controls-container">
-        <div class='select'>
-            <label for='audioSource'>Audio source: </label><select id='audioSource'></select>
-        </div>
-        <div class='select'>
-            <label for='videoSource'>Video source: </label><select id='videoSource'></select>
-        </div>
+    <div id="header-container">
+        <img src="site_files/WennSoftSignature02.png" />
     </div>
 
     <!-- Main Container -->
-    <div id='main-container'>
-        <video muted autoplay controls id="control-video" style="display: none;"></video>
-        <canvas width="640" height="400" style="-webkit-transform: scale(-1, 1); display: none;" id="ABOT-CANVAS"></canvas>
-        <canvas width="640" height="400" style="-webkit-transform: scale(-1, 1); display: none;" id="ABOT-DEBUG-CANVAS"></canvas>
+    <div id='directions-container'>
+        <h1>Treasure Hunting</h1>
+        <img src="site_files/metal-detector-icon.png" style="float: right;" />
+        <h2>Goal</h2>
+        <p>
+            You are an eager treasure hunter searching for the Big Reward, the Signature QR Code! Along you're hunt,
+            you will find other reward goodies about the WennSoft Signature Team.
+        </p>
+        <h2>How To Play</h2>
+        <p>
+            Play by using the table (Treasure Detector). By utilizing the rear camera, you will be hunting the different
+            AR Codes for hidden treasure. When the Treasure Detector starts beeping, click the dig for treasure action.
+        </p>
+        <h2>Final Notes</h2>
+        <p>
+            We hope you enjoy the hunt, (you might even learn something along the way.) Good Luck!
+        </p>
+        <p>
+            <a href="application.html">Start Treasure Hunting</a>
+        </p>
     </div>
-
-    <!-- Remainder of the Important Script Files. Must be loaded here -->
-    <script src='scripts/webcam/main.js'></script>
-    <script src="scripts/ar/JSARToolKit.js"></script>
-    <script src="scripts/ar/three.js"></script>
-
-    <!-- Typefaces -->
-    <script src="fonts/gentilis_bold.typeface.js"></script>
-    <script src="fonts/gentilis_regular.typeface.js"></script>
-    <script src="fonts/optimer_bold.typeface.js"></script>
-    <script src="fonts/optimer_regular.typeface.js"></script>
-    <script src="fonts/helvetiker_bold.typeface.js"></script>
-    <script src="fonts/helvetiker_regular.typeface.js"></script>
-    <script src="fonts/droid_sans_regular.typeface.js"></script>
-    <script src="fonts/droid_serif_regular.typeface.js"></script>
-    <script src="fonts/droid_serif_bold.typeface.js"></script>
-
-    <!-- All The Good Stuff -->
-    <script src="scripts/site/site.ar.initialize.js"></script>
 </body>
 </html>

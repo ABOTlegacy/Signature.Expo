@@ -63,7 +63,7 @@ define(['../ar/JSARToolKit'],function() {
 
         var markers = {};
         var detect = function( onCreate, onUpdate, onDestroy ) {
-            var markerCount = JSARDetector.detectMarkerLite(JSARRaster, 70); 
+            var markerCount = JSARDetector.detectMarkerLite(JSARRaster, 70);
             for (var index = 0; index < markerCount; index++) {
                 
                 var id = getMarkerNumber(index);

@@ -1,0 +1,41 @@
+﻿/* Main Container */
+#main-container.game {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    height: 75%;
+    min-height: 550px;
+    width: 640px;
+    margin-left: -320px;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+
+
+/* GL Canvas */
+#GLCanvas {
+    
+}
+
+
+
+
+
+/* Shovel */
+body div#shovel-container img {
+    width: 200px;
+    cursor: pointer;
+}
+body div#shovel-container img.disabled {
+    display: block;
+    opacity: 0.25;
+}
+body div#shovel-container img.enabled {
+    display: none;
+}
+body.shovel div#shovel-container img.disabled {
+    display: none;
+}
+body.shovel div#shovel-container img.enabled {
+    display: block;
+}

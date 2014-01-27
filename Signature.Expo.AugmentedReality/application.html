@@ -10,26 +10,59 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles/site.css" type="text/css" />
-    <link rel="stylesheet" href="styles/site.customData.css" type="text/css" />
+    <link rel="stylesheet" href="styles/site.game.css" type="text/css" />
+    <link rel="stylesheet" href="styles/site.game.rewards.css" type="text/css" />
+    <link rel="stylesheet" href="styles/site.game.rewardsList.css" type="text/css" />
+    <link rel="stylesheet" href="styles/site.game.gameControls.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="styles/timeline/timeline.css" />
 
     <!-- Script Files -->
     <script src="scripts/jquery/jquery-1.9.1.js"></script>
     <script src="scripts/json/json2.js"></script>
     <script src="scripts/typeface/typeface-0.15.js"></script>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="scripts/timeline/timeline.js"></script>
+
+    <!-- Script Game Files -->
+    <script src="scripts/site/site.game.js"></script>
+    <script src="scripts/site/site.game.item.js"></script>
+    <script src="scripts/site/site.game.rewards.js"></script>
+    <script src="scripts/site/site.game.board.js"></script>
+    <script src="scripts/site/site.game.shovel.js"></script>
 
     <!-- Set Debug to false -->
     <script>
         DEBUG = false;
+
+        // Load Visualization for Timelines
+        google.load("visualization", "1");
+
+        // Set callback to run when API is loaded
+        $(document).ready(function () {
+            // Load Rewards
+            $("div#rw32").load("html/timeline01.html");
+
+            // Load Game Board
+            $.game.board.clear();
+        });
     </script>
 </head>
 <body>
     <!-- Camera Controls -->
     <div id="camera-controls-container">
         <div class='select'>
-            <label for='audioSource'>Audio source: </label><select id='audioSource'></select>
+            <h2>Game Controls</h2>
         </div>
         <div class='select'>
-            <label for='videoSource'>Video source: </label><select id='videoSource'></select>
+            <input type="button" value="Reset Game" /></input>
+        </div>
+        <div class='select'>
+            <label for='audioSource'>Audio source: </label><br />
+            <select id='audioSource'></select>
+        </div>
+        <div class='select'>
+            <label for='videoSource'>Video source: </label><br />
+            <select id='videoSource'></select>
         </div>
 <!--        <div class='select'>
             <label for='resolutionSource'>Resolution: </label>
@@ -40,30 +73,95 @@
 
             </select>
         </div>-->
+<!--        <div class='select'>
+            <label for='videoSource'>Selected Mesh: </label><br />
+            <input type="text" id='txtSelectedMesh' size="10"></input>
+        </div>-->
+        
+
         <div class='select'>
-            <label for='videoSource'>Selected Mesh: </label><input type="text" id='txtSelectedMesh'></input>
+            <div id="message">
+                <lable id="game-message"></lable>
+            </div>
+        </div>
+
+        <div class='select'>
+            <div id="shovel-container">
+                <img class="enabled" src="site_files/shovel-enabled.png" />
+                <img class="disabled" src="site_files/shovel-disabled.png" />
+            </div>
         </div>
     </div>
+
+
+
+    <!-- Reward List -->
+    <div id="rewards-list-container">
+        <h1>Rewards:</h1>
+    </div>
+
+
 
     <!-- Main Container -->
-    <div id='main-container'>
-        <video muted autoplay controls id="control-video" class="video-canvas" style="display: none;"></video>
-        <canvas style="-webkit-transform: scale(-1, 1); display: none;" id="ABOT-CANVAS" class="video-canvas"></canvas>
-        <canvas style="-webkit-transform: scale(-1, 1); display: none;" id="ABOT-DEBUG-CANVAS" class="video-canvas"></canvas>
-    </div>
+    <div id='main-container' class="game">
 
-    <!-- Custom Data -->
-    <div id="custom-data-container">
-        <div class="custom-data" id="cd32">
-            <h1>Beachball</h1>
+        
+        <!-- Videos and Canvases -->
+        <div id="canvas-container">
+            <video muted autoplay controls id="control-video" class="video-canvas" style="display: none;"></video>
+            <canvas style="-webkit-transform: scale(-1, 1); display: none;" id="ABOT-CANVAS" class="video-canvas"></canvas>
+            <canvas style="-webkit-transform: scale(-1, 1); display: none;" id="ABOT-DEBUG-CANVAS" class="video-canvas"></canvas>
+            <canvas style="-webkit-transform: scale(-1, 1); display: none;" id="Canvas1" class="video-canvas"></canvas>
+        </div>
+
+
+        <!-- Detector Controls -->
+        <div id="detector-controls-container">
+            <meter style="width: 200px; height: 25px;" max="100" low="25" high="75" optimum="50" value="35"></meter>
+        </div>
+        
+    
+        <!-- Custom Data -->
+<!--        <div id="custom-data-container">
+            <div class="custom-data" id="cd32">
+                <h1>Beachball</h1>
+            </div>
+            <div class="custom-data" id="cd16">
+                <h1>Sand</h1>
+            </div>
+        </div>-->
+
+
+        <!-- Rewards -->
+        <div id="rewards-container">
+            <div class="rewards" id="rw2">
+                <span>Reward 021</span>
+            </div>
+            <div class="rewards" id="rw3">
+                <span>Reward 03</span>
+            </div>
+            <div class="rewards" id="rw32">
+                <span>Beachball</span>
+            </div>
+            <div class="rewards" id="rw16">
+                <span>Sand</span>
+            </div>
+            <div class="rewards" id="rwNotFound">
+                <span>Reward Was Not Found. Please Keep Searching</span>
+            </div>
+            <div class="rewards" id="rwClose">
+                <img src="site_files/red-x.png" />
+            </div>
         </div>
     </div>
+
+    
 
     <!-- Script Files must be loaded here -->
     <script src='scripts/webcam/main.js'></script>
     <script src='scripts/three/three.js'></script>
     <script src='scripts/site/site.three.touchevents.js'></script>
-    <script src='scripts/site/site.ar.customData.js'></script>
+<!--    <script src='scripts/site/site.ar.customData.js'></script>-->
 
     <!-- Typefaces -->
     <script src="fonts/gentilis_bold.typeface.js"></script>

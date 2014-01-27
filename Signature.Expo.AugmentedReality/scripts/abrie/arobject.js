@@ -34,12 +34,15 @@ define([], function () {
             mesh = createMarkerMeshText(params);
         } else if (params.type == "sphere") {
             mesh = createMarkerMeshSphere(params);
-            mesh.position.z = 200;
+            mesh.position.z = -50;
+        } else if (params.type == "plane") {
+            mesh = createMarkerMeshPlane(params);
+            mesh.position.z = -50;
         }
 
         // Other Misc Mesh Properties
         if (mesh != null) {
-            mesh.position.z = -50;
+            //mesh.position.z = -50;
             mesh.name = params.name;
             //if (params.selectable) {
             //    mesh.on('mousedown', function () {
@@ -74,7 +77,7 @@ define([], function () {
 
     // Sphere
     function createMarkerMeshSphere(params) {
-        var geometry = new THREE.SphereGeometry(50, 60, 40);
+        var geometry = new THREE.SphereGeometry(params.radius, params.width, params.height);
         var material = new THREE.MeshBasicMaterial({
             map: THREE.ImageUtils.loadTexture(params.texture)
         });
@@ -83,93 +86,15 @@ define([], function () {
 
     // Plane
     function createMarkerMeshPlane(params) {
-        var data = generateHeight(1024, 1024);
-        var texture = new THREE.Texture(generateTexture(data, 1024, 1024));
-        texture.needsUpdate = true;
+        var texture = THREE.ImageUtils.loadTexture(params.texture);
 
-        var material = new THREE.MeshBasicMaterial({ map: texture, overdraw: true });
+        var material = new THREE.MeshLambertMaterial({ map: texture });
+        var plane = new THREE.Mesh(new THREE.PlaneGeometry(params.width, params.height), material);
+        plane.side = THREE.DoubleSide;
 
-        var quality = 16, step = 1024 / quality;
-
-
-
-        var plane = new THREE.PlaneGeometry(2000, 2000, quality - 1, quality - 1);
-        plane.applyMatrix(new THREE.Matrix4().makeRotationX(-Math.PI / 2));
-
-        for (var i = 0, l = plane.vertices.length; i < l; i++) {
-
-            var x = i % quality, y = ~~(i / quality);
-            plane.vertices[i].y = data[(x * step) + (y * step) * 1024] * 2 - 128;
-
-        }
-
-        plane.computeCentroids();
-
-        return new THREE.Mesh(plane, material);
+        return plane;
     }
 
-
-
-
-
-
-    // Helper Method Texture
-    function generateTexture(data, width, height) {
-        var canvas, context, image, imageData,
-        level, diff, vector3, sun, shade;
-
-        vector3 = new THREE.Vector3(0, 0, 0);
-
-        sun = new THREE.Vector3(1, 1, 1);
-        sun.normalize();
-
-        canvas = document.createElement('canvas');
-        canvas.width = width;
-        canvas.height = height;
-
-        context = canvas.getContext('2d');
-        context.fillStyle = '#000';
-        context.fillRect(0, 0, width, height);
-
-        image = context.getImageData(0, 0, width, height);
-        imageData = image.data;
-
-        for (var i = 0, j = 0, l = imageData.length; i < l; i += 4, j++) {
-
-            vector3.x = data[j - 1] - data[j + 1];
-            vector3.y = 2;
-            vector3.z = data[j - width] - data[j + width];
-            vector3.normalize();
-
-            shade = vector3.dot(sun);
-
-            imageData[i] = (96 + shade * 128) * (data[j] * 0.007);
-            imageData[i + 1] = (32 + shade * 96) * (data[j] * 0.007);
-            imageData[i + 2] = (shade * 96) * (data[j] * 0.007);
-
-        }
-        context.putImageData(image, 0, 0);
-        return canvas;
-    }
-
-    // Helper Method Height
-    function generateHeight(width, height) {
-        var data = Float32Array ? new Float32Array(width * height) : [], perlin = new ImprovedNoise(),
-        size = width * height, quality = 2, z = Math.random() * 100;
-
-        for (var i = 0; i < size; i++) {
-            data[i] = 0
-        }
-
-        for (var j = 0; j < 4; j++) {
-            quality *= 4;
-            for (var i = 0; i < size; i++) {
-                var x = i % width, y = ~~(i / width);
-                data[i] += Math.floor(Math.abs(perlin.noise(x / quality, y / quality, z) * 0.5) * quality + 10);
-            }
-        }
-        return data;
-    }
 
 
 

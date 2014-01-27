@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Meta Files -->
+    <meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1'>
+    <meta http-equiv='X-UA-Compatible' content='chrome=1' />
+
+    <!-- Title -->
+    <title>Signature.AugmentedReality</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/site.css" type="text/css" />
+    <link rel="stylesheet" href="styles/site.customData.css" type="text/css" />
+
+     <!-- Script Files -->
+    <script src="scripts/jquery/jquery-1.9.1.js"></script>
+    <script src="scripts/json/json2.js"></script>
+    <script src="scripts/typeface/typeface-0.15.js"></script>
+
+    <!-- Set Debug to false -->
+    <script>
+        DEBUG = false;
+        $(document).ready(function () {
+            $("div#cd32").load("html/timeline01.html");
+        });
+    </script>
+
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+   <script type="text/javascript" src="scripts/timeline/timeline.js"></script>
+   <link rel="stylesheet" type="text/css" href="styles/timeline/timeline.css">
+
+    <script type="text/javascript">
+        var timeline;
+
+        google.load("visualization", "1");
+
+        // Set callback to run when API is loaded
+        google.setOnLoadCallback(drawVisualization);
+
+        // Called when the Visualization API is loaded.
+        function drawVisualization() {
+            // Create and populate a data table.
+            var data = new google.visualization.DataTable();
+            data.addColumn('datetime', 'start');
+            data.addColumn('datetime', 'end');
+            data.addColumn('string', 'content');
+
+            data.addRows([
+                [new Date(2010, 7, 23), , 'Conversation<br>' +
+                        '<img src="img/comments-icon.png" style="width:32px; height:32px;">'],
+                [new Date(2010, 7, 23, 23, 0, 0), , 'Mail from boss<br>' +
+                        '<img src="img/mail-icon.png" style="width:32px; height:32px;">'],
+                [new Date(2010, 7, 24, 16, 0, 0), , 'Report'],
+                [new Date(2010, 7, 26), new Date(2010, 8, 2), 'Traject A'],
+                [new Date(2010, 7, 28), , 'Memo<br>' +
+                        '<img src="img/notes-edit-icon.png" style="width:48px; height:48px;">'],
+                [new Date(2010, 7, 29), , 'Phone call<br>' +
+                        '<img src="img/Hardware-Mobile-Phone-icon.png" style="width:32px; height:32px;">'],
+                [new Date(2010, 7, 31), new Date(2010, 8, 3), 'Traject B'],
+                [new Date(2010, 8, 4, 12, 0, 0), , 'Report<br>' +
+                        '<img src="img/attachment-icon.png" style="width:32px; height:32px;">']
+            ]);
+
+            // specify options
+            var options = {
+                "width": "100%",
+                "height": "300px",
+                "style": "box"
+            };
+
+            // Instantiate our timeline object.
+            timeline = new links.Timeline(document.getElementById('mytimeline'));
+
+            // Draw our timeline with the created data and options
+            timeline.draw(data, options);
+        }
+    </script>
+
+</head>
+<body class="cd32">
+    <!-- Camera Controls -->
+    <div id="camera-controls-container">
+        <div class='select'>
+            <h2>Game Controlls</h2>
+        </div>
+        <div class='select'>
+            <label for='audioSource'>Audio source: </label><select id='audioSource'></select>
+        </div>
+        <div class='select'>
+            <label for='videoSource'>Video source: </label><select id='videoSource'></select>
+        </div>
+<!--        <div class='select'>
+            <label for='resolutionSource'>Resolution: </label>
+            <select id='resolutionSource'>
+                <option value="640x480">640x480</option>
+                <option value="960x720">960x720</option>
+                <option value="1280x720">1280x720</option>
+
+            </select>
+        </div>-->
+        <div class='select'>
+            <label for='videoSource'>Selected Mesh: </label><input type="text" id='txtSelectedMesh' size="10"></input>
+        </div>
+        <div class='select'>
+            <input type="button" value="Reset Game" /></input>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div id='main-container'>
+
+        <!-- Videos and Canvases -->
+        <video muted autoplay controls id="control-video" class="video-canvas" style="display: none;"></video>
+        <canvas style="-webkit-transform: scale(-1, 1); display: none;" id="ABOT-CANVAS" class="video-canvas"></canvas>
+        <canvas style="-webkit-transform: scale(-1, 1); display: none;" id="ABOT-DEBUG-CANVAS" class="video-canvas"></canvas>
+    
+        <!-- Custom Data -->
+        <div id="custom-data-container">
+            <div class="custom-data" id="cd32">
+                <h1>Beachball</h1>
+            </div>
+            <div class="custom-data" id="cd16">
+                <h1>Sand</h1>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- Script Files must be loaded here -->
+    <script src='scripts/webcam/main.js'></script>
+    <script src='scripts/three/three.js'></script>
+    <script src='scripts/site/site.three.touchevents.js'></script>
+    <script src='scripts/site/site.ar.customData.js'></script>
+
+    <!-- Typefaces -->
+    <script src="fonts/gentilis_bold.typeface.js"></script>
+    <script src="fonts/gentilis_regular.typeface.js"></script>
+    <script src="fonts/optimer_bold.typeface.js"></script>
+    <script src="fonts/optimer_regular.typeface.js"></script>
+    <script src="fonts/helvetiker_bold.typeface.js"></script>
+    <script src="fonts/helvetiker_regular.typeface.js"></script>
+    <script src="fonts/droid_sans_regular.typeface.js"></script>
+    <script src="fonts/droid_serif_regular.typeface.js"></script>
+    <script src="fonts/droid_serif_bold.typeface.js"></script>
+
+    <!-- The AR / Three Library -->
+    <script data-main="scripts/abrie/application.js" src="scripts/require/require.js"></script>
+</body>
+</html>

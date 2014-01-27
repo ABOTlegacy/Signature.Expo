@@ -17,16 +17,16 @@ requirejs( ['webcam','ardetector','arview','arobject'], function(webcam,ardetect
         context = canvas.getContext('2d');
 
         // create an AR Marker detector using the canvas as the data source
-        detector = ardetector.create( canvas );
+        detector = ardetector.create(canvas);
 
         // Create an AR View for displaying the augmented reality scene
-        view = arview.create( webcam.getDimensions(), canvas );
+        view = arview.create(webcam.getDimensions(), canvas);
 
         // Set the ARView camera projection matrix according to the detector
-        view.setCameraMatrix( detector.getCameraMatrix(10,1000) );
+        view.setCameraMatrix(detector.getCameraMatrix(10,1000));
         
         // Place the arview's GL canvas into the DOM.
-        document.getElementById("main-container").appendChild(view.glCanvas);
+        document.getElementById("canvas-container").appendChild(view.glCanvas);
     }
 
     // Runs one iteration of the game loop
@@ -62,7 +62,7 @@ requirejs( ['webcam','ardetector','arview','arobject'], function(webcam,ardetect
 
     // This function is called when a marker is initally detected on the stream
     function onMarkerCreated(marker) {
-        cdAdd(marker.id);
+        $.game.item.itemAdd(marker.id);
         var object = markerObjects[marker.id];
         object.transform(marker.matrix);
         view.add(object);
@@ -76,15 +76,22 @@ requirejs( ['webcam','ardetector','arview','arobject'], function(webcam,ardetect
 
     // This function is called when a marker disappears from the stream.
     function onMarkerDestroyed(marker) {
-        cdRemove(marker.id);
+        $.game.item.itemRemove(marker.id);
         var object = markerObjects[marker.id]; 
         view.remove( object );
     }
 
     // Create marker objects associated with the desired marker ID.
     var markerObjects = {
-        2: arobject.createMarkerObject({ type: "text", color: 0xAA0000, name: "2", selectable: true, text: "TEXT" }), // Marker #16, red.
-        16: arobject.createMarkerObject({ type: "cube", color: 0xAA0000, name: "16", selectable: true, texture: "ar_imgs/2414463667_a173b81c3b_z.jpg" }), // Marker #16, red.
+        2: arobject.createMarkerObject({ name: "2", type: "sphere", texture: "textures/beachball.jpg", radius: 50, width: 200, height: 200 }), // Marker #2
+        3: arobject.createMarkerObject({ name: "3", type: "plane", texture: "textures/sand03.jpg", width: 200, height: 200 }), // Marker #3
+        4: arobject.createMarkerObject({ name: "4", type: "plane", texture: "textures/sand04.jpg", width: 200, height: 200 }), // Marker #4
+        5: arobject.createMarkerObject({ name: "5", type: "sphere", texture: "textures/melon02.jpg", radius: 50, width: 200, height: 200 }), // Marker #5
+        6: arobject.createMarkerObject({ name: "6", type: "sphere", texture: "textures/beachball02.jpg", radius: 50, width: 200, height: 200 }), // Marker #6
+
+
+        16: arobject.createMarkerObject({ name: "16", type: "plane", texture: "textures/sand03.jpg", width: 200, height: 200 }), // Marker #16, red.
         32: arobject.createMarkerObject({ type: "sphere", color: 0x00BB00, name: "32", selectable: false, texture: "textures/beachball.jpg" }), // Marker #32, Beachball
+
     };
 });

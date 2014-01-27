@@ -1,0 +1,88 @@
+﻿
+
+/* Custom Data Containers */
+div#rewards-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Custom Elements */
+body div.rewards {
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Set Them Visible */
+body.rw1 div#rw1,
+body.rw2 div#rw2,
+body.rw3 div#rw3,
+body.rw4 div#rw4,
+body.rw5 div#rw5,
+body.rw6 div#rw6,
+body.rw7 div#rw7,
+body.rw8 div#rw8,
+body.rw9 div#rw9,
+body.rw10 div#rw10,
+body.rw11 div#rw11,
+body.rw12 div#rw12,
+body.rw13 div#rw13,
+body.rw14 div#rw14,
+body.rw15 div#rw15,
+body.rw16 div#rw16,
+body.rw17 div#rw17,
+body.rw18 div#rw18,
+body.rw19 div#rw19,
+body.rw20 div#rw20,
+body.rw21 div#rw21,
+body.rw22 div#rw22,
+body.rw23 div#rw23,
+body.rw24 div#rw24,
+body.rw25 div#rw25,
+body.rw26 div#rw26,
+body.rw27 div#rw27,
+body.rw28 div#rw28,
+body.rw29 div#rw29,
+body.rw30 div#rw30,
+body.rw31 div#rw31,
+body.rw32 div#rw32,
+body.rw33 div#rw33,
+body.rw34 div#rw34,
+body.rw35 div#rw35,
+body.rw36 div#rw36,
+body.rw37 div#rw37,
+body.rw38 div#rw38,
+body.rw39 div#rw39,
+body.rwClose div#rwClose,
+body.rwNotFound div#rwNotFound {
+    display: block;
+    visibility: visible;
+}
+
+
+
+
+/* Camera Controls Container */
+body div#rw32 {
+    background: rgba(255, 255, 255, 0.75);
+}
+body.rw32 div#rw32 {
+    display: block;
+    visibility: visible;
+}
+
+
+
+/* Camera Controls Container */
+body div#rw16 {
+    /*background: rgba(255, 255, 255, 0.75);*/
+}
+body.rw16 div#rw16 {
+    display: block;
+    visibility: visible;
+}

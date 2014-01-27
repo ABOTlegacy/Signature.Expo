@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Meta Files -->
+    <meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1'>
+    <meta http-equiv='X-UA-Compatible' content='chrome=1' />
+
+    <!-- Title -->
+    <title>Signature.AugmentedReality</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/site.css" type="text/css" />
+
+    <!-- Script Files -->
+    <script src="scripts/jquery/jquery-1.9.1.js"></script>
+    <script src="scripts/json/json2.js"></script>
+    <script src="scripts/typeface/typeface-0.15.js"></script>
+</head>
+<body>
+    <!-- Camera Controls -->
+    <div id="camera-controls-container">
+        <div class='select'>
+            <label for='audioSource'>Audio source: </label><select id='audioSource'></select>
+        </div>
+        <div class='select'>
+            <label for='videoSource'>Video source: </label><select id='videoSource'></select>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div id='main-container'>
+        <video muted autoplay controls id="control-video" style="display: none;"></video>
+        <canvas width="640" height="400" style="-webkit-transform: scale(-1, 1); display: none;" id="ABOT-CANVAS"></canvas>
+        <canvas width="640" height="400" style="-webkit-transform: scale(-1, 1); display: none;" id="ABOT-DEBUG-CANVAS"></canvas>
+    </div>
+
+    <!-- Remainder of the Important Script Files. Must be loaded here -->
+    <script src='scripts/webcam/main.js'></script>
+    <script src="scripts/ar/JSARToolKit.js"></script>
+    <script src="scripts/ar/three.js"></script>
+
+    <!-- Typefaces -->
+    <script src="fonts/gentilis_bold.typeface.js"></script>
+    <script src="fonts/gentilis_regular.typeface.js"></script>
+    <script src="fonts/optimer_bold.typeface.js"></script>
+    <script src="fonts/optimer_regular.typeface.js"></script>
+    <script src="fonts/helvetiker_bold.typeface.js"></script>
+    <script src="fonts/helvetiker_regular.typeface.js"></script>
+    <script src="fonts/droid_sans_regular.typeface.js"></script>
+    <script src="fonts/droid_serif_regular.typeface.js"></script>
+    <script src="fonts/droid_serif_bold.typeface.js"></script>
+
+    <!-- All The Good Stuff -->
+    <script src="scripts/site/site.ar.initialize.js"></script>
+</body>
+</html>
