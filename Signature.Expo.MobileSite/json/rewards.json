@@ -7,19 +7,19 @@
 		"iconIncomplete": "images/crazystraw_bw.jpg",
         "trials": [
             {
-                "id": "evoTask1",
+                "id": "evoMatch",
                 "unlocked": false,
-				"description" : "Task 1"
+				"description" : "Match the Evolution team member to his or her former profession"
             },
 			{
-                "id": "evoTask2",
+                "id": "evoLine",
                 "unlocked": false,
-				"description" : "Task 2"
+				"description" : "Randomly select a work order line, complete the task, log your results, and complete the line"
             },
 			            {
-                "id": "evoTask3",
+                "id": "evoAsset",
                 "unlocked": false,
-				"description" : "Task 1"
+				"description" : "Choose an item from the suitcase, then use FieldTech to find its matching asset record and add a photo"
             }
         ]
     },
@@ -33,17 +33,17 @@
             {
                 "id": "sigfavdrink",
                 "unlocked": false,
-				"description" : "Find out the Favorite Drink of Signature Team Members"
+				"description" : "Find out the favorite drink of Signature team members"
             },
 			            {
                 "id": "sigdemo",
                 "unlocked": false,
-				"description" : "Create and Complete a Service Call using Signature products"
+				"description" : "View the Signature team alternate reality demo"
             },
 			            {
                 "id": "sigdice",
                 "unlocked": false,
-				"description" : "Beat a Signature Team Member in Bar Dice"
+				"description" : "Beat a Signature team member in Pair-a-Dice"
             }
 	    ]
     },
@@ -55,19 +55,19 @@
 		"iconIncomplete": "images/umbrella_bw.jpg",
 	    "trials": [
             {
-                "id": "SQATask1",
+                "id": "SQALocate",
                 "unlocked": false,
-				"description" : "Task 6"
+				"description" : "Locate SQA Beach"
+            },
+			{
+                "id": "SQABug",
+                "unlocked": false,
+				"description" : "Find a bug in the SQA sandbox"
             },
 			            {
-                "id": "SQATask2",
+                "id": "SQATrivia",
                 "unlocked": false,
-				"description" : "Task 7"
-            },
-			            {
-                "id": "SQATask3",
-                "unlocked": false,
-				"description" : "Task 8"
+				"description" : "Do your best to answer an SQA trivia question"
             }
 	    ]
     }

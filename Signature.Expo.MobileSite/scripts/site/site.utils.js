@@ -30,7 +30,26 @@
 
         getUrlVar: function(name) {
             return $.utils.getUrlVars()[name];
-        }
+        },
+
+	    completeTaskReward: function(taskId) {
+	        var rewards = $.configuration.getRewards();
+	        for (var i = 0; i < rewards.length; i++) {
+	            var rewardUnlock = true;
+	            for (var j = 0; j < rewards[i].trials.length; j++) {
+	                if (taskId === rewards[i].trials[j].id) {     
+	                rewards[i].trials[j].unlocked = true;
+	                }
+	                else if (rewards[i].trials[j].unlocked === false) {
+	                    rewardUnlock = false;
+	                }
+	            }
+	            rewards[i].unlocked = rewardUnlock;
+	        }
+	        $.configuration.setRewards(rewards);
+
+	    }
+
 
     }
 })(jQuery);
