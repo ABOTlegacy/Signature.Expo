@@ -44,7 +44,8 @@
         // Set callback to run when API is loaded
         $(document).ready(function () {
             // Load Rewards
-            $("div#rw32").load("html/timeline01.html");
+            $("div#rw3").load("html/timeline01.html");
+            $("div#rw4").load("html/bargraph01.html");
 
             // Initialize Ground
             $.game.ground.initilize();
@@ -122,7 +123,7 @@
 
     <!-- Reward List -->
     <div id="rewards-list-container">
-        <h1>Rewards:</h1>
+        <h1>Treasure Haul:</h1>
     </div>
 
 
@@ -165,6 +166,12 @@
             <div class="rewards" id="rw3">
                 <span>Reward 03</span>
             </div>
+            <div class="rewards" id="rw4">
+                <span>Reward 04</span>
+            </div>
+            <div class="rewards" id="rw5">
+                <img src="site_files/video-game-diagram.jpg" />
+            </div>
             <div class="rewards" id="rw32">
                 <span>Beachball</span>
             </div>
@@ -172,7 +179,7 @@
                 <span>Sand</span>
             </div>
             <div class="rewards" id="rwNotFound">
-                <span>Reward Was Not Found. Please Keep Searching</span>
+                <img src="site_files/no-treasure-found.jpg" />
             </div>
             <div class="rewards" id="rwClose">
                 <img src="site_files/red-x.png" />

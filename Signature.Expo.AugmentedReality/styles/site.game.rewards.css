@@ -15,6 +15,8 @@ body div.rewards {
     visibility: hidden;
     width: 100%;
     height: 100%;
+    top: 0px;
+    left: 0px;
 }
 
 
@@ -62,6 +64,7 @@ body.rwClose div#rwClose,
 body.rwNotFound div#rwNotFound {
     display: block;
     visibility: visible;
+    position: absolute;
 }
 
 
@@ -71,18 +74,9 @@ body.rwNotFound div#rwNotFound {
 body div#rw32 {
     background: rgba(255, 255, 255, 0.75);
 }
-body.rw32 div#rw32 {
-    display: block;
-    visibility: visible;
-}
-
 
 
 /* Camera Controls Container */
 body div#rw16 {
     /*background: rgba(255, 255, 255, 0.75);*/
-}
-body.rw16 div#rw16 {
-    display: block;
-    visibility: visible;
 }

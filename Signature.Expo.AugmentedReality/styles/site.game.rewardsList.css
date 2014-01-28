@@ -16,22 +16,28 @@
     text-align: center;
 }
 #rewards-list-container div.reward-list-item {
-    text-align: center;
+    /*text-align: center;
     border-bottom: #000000 solid thin;
     border-radius: 25px;
-    margin-bottom: 5px;
+    margin-bottom: 5px;*/
     cursor: pointer;
+    height: 50px;
+}
+#rewards-list-container div.reward-list-item img.coin {
+    float: left;
+    height: 50px;
 }
 
 
 
 /* Close Rewards X Button*/
-div#rwClose {
+body div#rwClose {
     position: absolute;
-    top: -10px;
-    right: -10px;
-    width: 40px;
-    height: 40px;
+    top: -20px;
+    left: auto;
+    right: -30px;
+    width: 60px;
+    height: 60px;
     cursor: pointer;
 }
 div#rwClose img {

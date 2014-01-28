@@ -7,8 +7,10 @@
     $.game.reward = {
         _rewardsListMaster:
             [
-                { rewardId: 1, itemId: 2, rewardName: "Signature Timeline", status: "locked" },
-                { rewardId: 2, itemId: 3, rewardName: "Test", status: "locked" },
+                { rewardId: 1, itemId: 2, rewardName: "Signature Timeline", status: "locked", coin: "site_files/coin-01.png" },
+                { rewardId: 2, itemId: 3, rewardName: "Test", status: "locked", coin: "site_files/coin-02.png" },
+                { rewardId: 3, itemId: 4, rewardName: "Test", status: "locked", coin: "site_files/coin-03.png" },
+                { rewardId: 4, itemId: 5, rewardName: "Video Games", status: "locked", coin: "site_files/coin-04.png" },
             ],
 
 
@@ -22,7 +24,10 @@
             // Reward Found
             if (reward != null) {
                 $("div#rewards-list-container").append("" +
-                    "<div class=\"reward-list-item\" id=\"rwtile" + reward.rewardId + "\">" + reward.rewardName + "</div>" +
+                    "<div class=\"reward-list-item\" id=\"rwtile" + reward.rewardId + "\">" +
+                    "<img src=\"" + reward.coin + "\" class=\"coin\">" +
+                    reward.rewardName +
+                    "</div>" +
                 "");
 
                 $("div#rwtile" + reward.rewardId).on("click", function () {
