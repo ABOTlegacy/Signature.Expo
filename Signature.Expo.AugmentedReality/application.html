@@ -4,6 +4,7 @@
     <!-- Meta Files -->
     <meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1'>
     <meta http-equiv='X-UA-Compatible' content='chrome=1' />
+    <meta name="mobile-web-app-capable" content="yes">
 
     <!-- Title -->
     <title>Signature.AugmentedReality</title>
@@ -22,13 +23,16 @@
     <script src="scripts/typeface/typeface-0.15.js"></script>
     <script type="text/javascript" src="http://www.google.com/jsapi"></script>
     <script type="text/javascript" src="scripts/timeline/timeline.js"></script>
+    
 
     <!-- Script Game Files -->
     <script src="scripts/site/site.game.js"></script>
     <script src="scripts/site/site.game.item.js"></script>
-    <script src="scripts/site/site.game.rewards.js"></script>
+    <script src="scripts/site/site.game.reward.js"></script>
     <script src="scripts/site/site.game.board.js"></script>
     <script src="scripts/site/site.game.shovel.js"></script>
+    <script src="scripts/site/site.game.meter.js"></script>
+    <script src="scripts/site/site.game.ground.js"></script>
 
     <!-- Set Debug to false -->
     <script>
@@ -42,56 +46,77 @@
             // Load Rewards
             $("div#rw32").load("html/timeline01.html");
 
+            // Initialize Ground
+            $.game.ground.initilize();
+
             // Load Game Board
             $.game.board.clear();
+
+            // Enter fullscreen mode
+            window.scrollTo(0, 1);
+
+            // Add Menu Events
+            $("#camera-controls-menu").on("click", function () {
+                if ($("#camera-controls-container").hasClass("collapsed")) {
+                    $("div#camera-controls-container div.select").show();
+                    $("#camera-controls-container").removeClass("collapsed").addClass("expanded");
+                } else {
+                    $("div#camera-controls-container div.select").hide();
+                    $("#camera-controls-container").removeClass("expanded").addClass("collapsed");
+                }
+            });
+            $("#camera-controls-menu").click();
         });
     </script>
 </head>
 <body>
     <!-- Camera Controls -->
-    <div id="camera-controls-container">
-        <div class='select'>
-            <h2>Game Controls</h2>
-        </div>
-        <div class='select'>
-            <input type="button" value="Reset Game" /></input>
-        </div>
-        <div class='select'>
-            <label for='audioSource'>Audio source: </label><br />
-            <select id='audioSource'></select>
-        </div>
-        <div class='select'>
-            <label for='videoSource'>Video source: </label><br />
-            <select id='videoSource'></select>
-        </div>
-<!--        <div class='select'>
-            <label for='resolutionSource'>Resolution: </label>
-            <select id='resolutionSource'>
-                <option value="640x480">640x480</option>
-                <option value="960x720">960x720</option>
-                <option value="1280x720">1280x720</option>
-
-            </select>
-        </div>-->
-<!--        <div class='select'>
-            <label for='videoSource'>Selected Mesh: </label><br />
-            <input type="text" id='txtSelectedMesh' size="10"></input>
-        </div>-->
-        
-
-        <div class='select'>
-            <div id="message">
-                <lable id="game-message"></lable>
+    <div id="right-side-container">
+        <div id="camera-controls-container">
+            <div class='link' id="camera-controls-menu" style="height: 35px;">
+                <h2>
+                    <img src="site_files/toggle-collapse.png" class="expanded" />
+                    <img src="site_files/toggle-expand-alt.png" class="collapsed" />
+                    Game Controls
+                </h2>
             </div>
+            <div class='select'>
+                <input type="button" value="Reset Game" />
+            </div>
+            <div class='select'>
+                <label for='audioSource'>Audio source: </label><br />
+                <select id='audioSource'></select>
+            </div>
+            <div class='select'>
+                <label for='videoSource'>Video source: </label><br />
+                <select id='videoSource'></select>
+            </div>
+            <!--<div class='select'>
+                <label for='resolutionSource'>Resolution: </label>
+                <select id='resolutionSource'>
+                    <option value="640x480">640x480</option>
+                    <option value="960x720">960x720</option>
+                    <option value="1280x720">1280x720</option>
+                </select>
+            </div>-->
         </div>
-
-        <div class='select'>
-            <div id="shovel-container">
+        
+        <!-- Shovel -->
+        <div id="shovel-container">
+            <div class='select'>
                 <img class="enabled" src="site_files/shovel-enabled.png" />
                 <img class="disabled" src="site_files/shovel-disabled.png" />
             </div>
         </div>
+
+        <div class='select'>
+            <div id="message">
+                <label id="game-message"></label>
+            </div>
+        </div>
+        </div>
     </div>
+    
 
 
 
@@ -117,7 +142,7 @@
 
         <!-- Detector Controls -->
         <div id="detector-controls-container">
-            <meter style="width: 200px; height: 25px;" max="100" low="25" high="75" optimum="50" value="35"></meter>
+            TREASURE READING: <meter id="meter-item-detector" style="width: 200px; height: 25px;" min="0" max="1" low="0.25" high="0.75" optimum="0.8" value="5"></meter>
         </div>
         
     

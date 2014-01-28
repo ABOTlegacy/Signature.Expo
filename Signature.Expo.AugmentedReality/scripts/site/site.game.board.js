@@ -48,6 +48,9 @@
 
             // Refresh Shovel
             $.game.shovel.refresh();
+
+            // Refresh Meter
+            $.game.meter.refresh();
         },
 
 

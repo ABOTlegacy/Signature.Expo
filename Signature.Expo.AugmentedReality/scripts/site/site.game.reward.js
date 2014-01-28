@@ -16,13 +16,8 @@
             // Get Current Item
             var currentItem = $.game.item._itemsCurrentlyDisplayedArray[0];
 
-            // Check if Unlocked
-            var reward = null;
-            for (var i = 0; i < $.game.reward._rewardsListMaster.length; i++) {
-                if ($.game.reward._rewardsListMaster[i].itemId == currentItem) {
-                    reward = $.game.reward._rewardsListMaster[i];
-                }
-            }
+            // Check for Reward
+            var reward = $.game.reward.checkForReward();
 
             // Reward Found
             if (reward != null) {
@@ -48,22 +43,30 @@
                 }
             }
             return false;
+        },
+
+
+
+        checkForReward: function () {
+            // Don't Check if more than one item is displayed
+            if ($.game.item._itemsCurrentlyDisplayedArray.length != 1) {
+                return null;
+            }
+
+            // Get Current Item
+            var currentItem = $.game.item._itemsCurrentlyDisplayedArray[0];
+
+            // Check if Unlocked
+            var reward = null;
+            for (var i = 0; i < $.game.reward._rewardsListMaster.length; i++) {
+                if ($.game.reward._rewardsListMaster[i].itemId == currentItem) {
+                    reward = $.game.reward._rewardsListMaster[i];
+                }
+            }
+
+            // Return
+            return reward;
         }
-
-
-
-        //checkForReward: function () {
-        //    // Get Current Item
-        //    var currentItem = $.game.item._itemsCurrentlyDisplayedArray[0];
-
-        //    // Check if Unlocked
-        //    for (var i = 0; i < $.game.reward._rewardsListMaster.length; i++) {
-        //        if ($.game.reward._rewardsListMaster[i].itemId == currentItem) {
-        //            return true;
-        //        }
-        //    }
-        //    return false;
-        //}
 
 
 

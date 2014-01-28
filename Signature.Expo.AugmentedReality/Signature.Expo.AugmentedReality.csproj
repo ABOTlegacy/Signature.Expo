@@ -180,8 +180,11 @@
     <Content Include="scripts\require\require.js" />
     <Content Include="scripts\abrie\webcam.js" />
     <Content Include="scripts\ar\JSARToolKit.js" />
+    <Content Include="scripts\site\site.game.ground.js" />
+    <Content Include="scripts\site\site.game.meter.js" />
+    <Content Include="scripts\site\site.game.js" />
     <Content Include="scripts\site\site.game.shovel.js" />
-    <Content Include="scripts\site\site.game.rewards.js" />
+    <Content Include="scripts\site\site.game.reward.js" />
     <Content Include="scripts\site\site.game.board.js" />
     <Content Include="scripts\site\site.game.item.js" />
     <Content Include="scripts\site\site.ar.customData.js" />
@@ -202,9 +205,15 @@
     <Content Include="scripts\typeface\typeface-0.15.js" />
     <Content Include="site_files\Background04.png" />
     <Content Include="site_files\metal-detector-icon.png" />
+    <Content Include="site_files\red-x.png" />
     <Content Include="site_files\shovel-disabled.png" />
     <Content Include="site_files\shovel-enabled.png" />
+    <Content Include="site_files\toggle-collapse.png" />
+    <Content Include="site_files\toggle-expand-alt.png" />
     <Content Include="site_files\WennSoftSignature02.png" />
+    <Content Include="styles\site.game.gameControls.css" />
+    <Content Include="styles\site.game.rewardsList.css" />
+    <Content Include="styles\site.game.rewards.css" />
     <Content Include="styles\site.game.css" />
     <Content Include="styles\site.customData.css" />
     <Content Include="styles\site.css" />
@@ -216,6 +225,8 @@
     <Content Include="textures\melon01.JPG" />
     <Content Include="textures\melon02.jpg" />
     <Content Include="textures\palmtree01.png" />
+    <Content Include="textures\sand-dug.jpg" />
+    <Content Include="textures\sand-undug.jpg" />
     <Content Include="textures\sand01.JPG" />
     <Content Include="textures\sand02.JPG" />
     <Content Include="textures\sand03.jpg" />

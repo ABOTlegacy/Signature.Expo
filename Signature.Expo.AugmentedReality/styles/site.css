@@ -12,6 +12,13 @@ a, font, img {
 
 
 
+/* Links */
+.link {
+    cursor: pointer;
+}
+
+
+
 /* Main Elements */
 body {
     background: #1b7bbf url("../site_files/Background04.png") no-repeat;

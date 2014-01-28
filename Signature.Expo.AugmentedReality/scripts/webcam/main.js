@@ -2,6 +2,8 @@ var videoElement = document.querySelector("video");
 var audioSelect = document.querySelector("select#audioSource");
 var videoSelect = document.querySelector("select#videoSource");
 var startButton = document.querySelector("button#start");
+var isGotSources = false;
+var isFirstLoad = true;
 
 navigator.getUserMedia = navigator.getUserMedia ||
   navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
@@ -16,17 +18,19 @@ function gotSources(sourceInfos) {
       audioSelect.appendChild(option);
     } else if (sourceInfo.kind === 'video') {
       option.text = sourceInfo.label || 'camera ' + (videoSelect.length + 1);
-      videoSelect.appendChild(option);
+      $(videoSelect).append(option);
     } else {
       console.log('Some other kind of source: ', sourceInfo);
     }
   }
+  isGotSources = true;
+  start();
 }
 
 if (typeof MediaStreamTrack === 'undefined'){
   alert('This browser does not support MediaStreamTrack.\n\nTry Chrome Canary.');
 } else {
-  MediaStreamTrack.getSources(gotSources);
+    MediaStreamTrack.getSources(gotSources);
 }
 
 
@@ -47,20 +51,32 @@ function start(){
     videoElement.src = null;
     window.stream.stop();
   }
+
   var audioSource = audioSelect.value;
   var videoSource = videoSelect.value;
+
+
+  if (isFirstLoad && isGotSources) {
+      isFirstLoad = false;
+      videoSource = $('select#videoSource option').filter(function () {
+          return ($(this).text() == 'camera 2'); //To select Blue
+      }).attr("value");
+  }
+
   var constraints = {
     audio: {
       optional: [{sourceId: audioSource}]
     },
     video: {
-      optional: [{sourceId: videoSource}]
+        optional: [{sourceId: videoSource}]
     }
   };
-  navigator.getUserMedia(constraints, successCallback, errorCallback);
+  if (isGotSources) {
+      navigator.getUserMedia(constraints, successCallback, errorCallback);
+  } else {
+      // Nothing
+  }
 }
 
 audioSelect.onchange = start;
 videoSelect.onchange = start;
-
-start();

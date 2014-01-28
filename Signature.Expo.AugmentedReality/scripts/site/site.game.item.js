@@ -13,7 +13,12 @@
 
 
         // Function to check arrays
-        itemAdd: function(id) {
+        itemAdd: function (marker) {
+
+            // Initialize Variables
+            var id = marker.id;
+
+            // Adjust Display
             $("body").addClass("item" + id);
             $.game.item._itemsCurrentlyDisplayedArray.push(id);
             $.game.board.refresh();
@@ -22,7 +27,11 @@
 
 
         // Function to check arrays
-        itemRemove: function(id) {
+        itemRemove: function (marker, callback) {
+
+            // Initialize Variables
+            var id = marker.id;
+
             // Remove From Currently Displayed Array
             for (var i = 0; i < $.game.item._itemsCurrentlyDisplayedArray.length; i++) {
                 if ($.game.item._itemsCurrentlyDisplayedArray[i] == id) {
@@ -32,7 +41,8 @@
 
             // Removes the content from the Screen
             setTimeout(function () {
-                if (! $.game.item.itemExists(id)) {
+                if (!$.game.item.itemExists(id)) {
+                    callback();
                     $("body").removeClass("item" + id);
                     $.game.board.refresh();
                 }
@@ -42,7 +52,7 @@
 
 
         // Checks to see if id exists
-        itemExists: function(id) {
+        itemExists: function (id) {
             for (var i = 0; i < $.game.item._itemsCurrentlyDisplayedArray.length; i++) {
                 if ($.game.item._itemsCurrentlyDisplayedArray[i] == id) {
                     return true;

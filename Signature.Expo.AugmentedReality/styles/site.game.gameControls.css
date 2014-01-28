@@ -1,7 +1,26 @@
 ﻿
 
+/* Right Side Container */
+div#right-side-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 15%;
+    min-height: 75%;
+    background: #FFFFFF;
+    padding: 20px;
+    z-index: 20;
+}
+div#right-side-container h1 {
+    text-align: center;
+}
+
+
+
+
+
 /* Camera Controls Container */
-#camera-controls-container {
+/*#camera-controls-container {
     position: fixed;
     top: 20px;
     right: 20px;
@@ -12,7 +31,7 @@
 }
 #camera-controls-container h1 {
     text-align: center;
-}
+}*/
 
 
 
@@ -21,8 +40,8 @@
 /* Close Rewards X Button*/
 div#closeReward {
     position: absolute;
-    top: -10;
-    right: -10;
+    top: -10px;
+    right: -10px;
     width: 20px;
     height: 20px;
     cursor: pointer;
@@ -30,4 +49,62 @@ div#closeReward {
 div#closeReward img {
     width: 100%;
     height: 100%;
+}
+
+
+
+
+
+
+/* Collapse And Hidden */
+div.collapsed,
+div.expanded {
+
+}
+div img.collapsed,
+div img.expanded {
+    display: none;
+    float: left;
+}
+div.collapsed img.collapsed,
+div.expanded img.expanded {
+    display: inline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Transparent Sand */
+@-webkit-keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
+@-moz-keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
+@keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
+.transparent-sand {
+    position: absolute;
+    z-index: 10;
+    background: url("../site_files/sand-transparent-01.png");
+    width: 350px;
+    height: 350px;
+
+
+
+    opacity: 1;  /* make things invisible upon start */
+    -webkit-animation: fadeOut ease-in 0;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation: fadeOut ease-in 0;
+    animation: fadeOut ease-in 0;
+ 
+    -webkit-animation-fill-mode: forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+ 
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    animation-duration: 2s;
 }

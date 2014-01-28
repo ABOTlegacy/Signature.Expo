@@ -87,15 +87,11 @@ define([], function () {
     // Plane
     function createMarkerMeshPlane(params) {
         var texture = THREE.ImageUtils.loadTexture(params.texture);
-
         var material = new THREE.MeshLambertMaterial({ map: texture });
         var plane = new THREE.Mesh(new THREE.PlaneGeometry(params.width, params.height), material);
         plane.side = THREE.DoubleSide;
-
         return plane;
     }
-
-
 
 
 
@@ -105,12 +101,10 @@ define([], function () {
     function createMarkerObject(params) {
         var modelContainer = createContainer();
         var modelMesh = createMarkerMesh(params);
-
-
-        modelContainer.add( modelMesh );
+        modelContainer.add(modelMesh);
 
         function transform(matrix) {
-            modelContainer.transformFromArray( matrix );
+            modelContainer.transformFromArray(matrix);
         }
 
         return {
@@ -118,6 +112,10 @@ define([], function () {
             model: modelContainer
         }
     }
+
+
+    
+
 
     return {
         createMarkerObject:createMarkerObject
