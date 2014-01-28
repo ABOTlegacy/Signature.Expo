@@ -19,8 +19,16 @@
 		    } else if ($.utils.getUrlVar("action") == "unlock-umbrella") {
 		        this.unlockUmbrella();
 		    } else if ($.utils.getUrlVar("action") == "complete-task") {
-		        this.completeTask();
+		        if ($.configuration.getRewards() == null) {
+		            this.start();
+		        } else {
+		            this.completeTask();
+		        }
+
+		    } else if ($.utils.getUrlVar("action") == "viewMap") {
+		        this.viewMap();
 		    }
+
 
 		},
 
@@ -49,10 +57,14 @@
 		            success: function (data) {
 		                $.configuration.setRewards(data);
 		                // Display Content
-		              //  $("body").empty().load("html/site.start.html");
+		                //  $("body").empty().load("html/site.start.html");
+		                if ($.utils.getUrlVar("action") === "complete-task") {
+		                    $.utils.completeTaskReward($.utils.getUrlVar("taskId"));
+		                }
 		                $("body").load("html/site.checklist.html");
 		            },
 		            fail: function () {
+		                console.log('fail');
 		            }
 		        });
 		    }
@@ -65,28 +77,18 @@
 
 
 		completeTask: function() {
-		    var rewards = $.configuration.getRewards();
-		    var taskId = $.utils.getUrlVar("taskId");
-		    for (var i = 0; i < rewards.length; i++) {
-		        var rewardUnlock = true;
-		        for (var j = 0; j < rewards[i].trials.length; j++) {
-		            console.log(taskId);
-		            if (taskId === rewards[i].trials[j].id) {
-		                
-		                rewards[i].trials[j].unlocked = true;
-		            }
-		            else if (rewards[i].trials[j].unlocked === false) {
-		                rewardUnlock = false;
-		            }
-		        }
-		        rewards[i].unlock = rewardUnlock;
-		    }
-		    $.configuration.setRewards(rewards);
+
+		    $.utils.completeTaskReward($.utils.getUrlVar("taskId"));
+
 		    // Display Content
 		    $("body").empty().load("html/site.checklist.html");
 
 		},
 
+		viewMap: function() {
+		    // Display Content
+		    $("body").empty().load("html/site.map.html");
+		},
 
 	    /**
          * Unlock Umbrella

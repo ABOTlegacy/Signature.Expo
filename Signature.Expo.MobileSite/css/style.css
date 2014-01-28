@@ -30,6 +30,7 @@ div.reward span {
     display: block;
     margin-left: 10%;
     font-size: 122%;
+    margin-bottom: 8px;
 }
 
 div.reward span:before {
@@ -53,10 +54,14 @@ img.poster {
 	width: 100%;
 }
 
+img.map {
+    width: 100%;
+}
+
 a#takeMe
 {
 	background-color: #006699;
-	color: #FFA319;
+	color: #FFFFFF;
 	text-decoration: none;
 	font-size: 150%;
 	padding: 5px;
@@ -110,7 +115,7 @@ div.gameDescription {
     margin-left: 2%;
     margin-right: 2%;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
 }
 
 div#congrats p {
@@ -124,4 +129,19 @@ div#congrats p {
 img#congratsImage {
     width: 60%;
     margin-left: 20%;
+}
+
+a#mapLink {
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+}
+
+div#mapLinkWrapper {
+    width: 40%;
+    margin-left:30%;
+        background-color: rgb(65,122,141);
+    border-radius: 6px;
+    padding: 6px;
+    text-align: center;
 }
