@@ -5,7 +5,7 @@ div#right-side-container {
     position: fixed;
     top: 20px;
     right: 20px;
-    width: 15%;
+    width: 10%;
     min-height: 75%;
     background: #FFFFFF;
     padding: 20px;
@@ -71,6 +71,10 @@ div.expanded img.expanded {
     display: inline;
 }
 
+div#shovel-container img {
+    width: 100%;
+
+}
 
 
 

@@ -22,7 +22,7 @@
 
 /* Shovel */
 body div#shovel-container img {
-    width: 200px;
+    width: 100%;
     cursor: pointer;
 }
 body div#shovel-container img.disabled {

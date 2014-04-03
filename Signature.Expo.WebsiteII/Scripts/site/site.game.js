@@ -11,7 +11,7 @@
 	    _gameTimer: 60,
 	    _gameGuesses: null,
 	    _gameStatus: "play",
-	    _gameTotalAnswersToWin: 5,
+	    _gameTotalAnswersToWin: 3,
 
 
 

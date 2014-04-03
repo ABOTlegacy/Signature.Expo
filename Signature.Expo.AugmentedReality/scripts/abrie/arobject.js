@@ -41,6 +41,10 @@ define([], function () {
         } else if (params.type == "cubeimg") {
             mesh = createMarkerMeshCubeImg(params);
             mesh.position.z = -50;
+        } else if (params.type == "planevertical") {
+            mesh = createMarkerMeshPlane(params);
+            mesh.position.z = -50;
+            mesh.rotation.z = Math.PI / 2
         }
 
         // Other Misc Mesh Properties
@@ -100,6 +104,18 @@ define([], function () {
         var material = new THREE.MeshLambertMaterial({ map: texture, transparent: true, opacity: 1 });
         var plane = new THREE.Mesh(new THREE.PlaneGeometry(params.width, params.height), material);
         plane.side = THREE.DoubleSide;
+        return plane;
+    }
+
+    // Vertical Plane
+    function createMarkerMeshPlaneVertical(params) {
+        var texture = THREE.ImageUtils.loadTexture(params.texture);
+        var geometry = new THREE.PlaneGeometry(params.width, params.height);
+        
+        var material = new THREE.MeshLambertMaterial({ map: texture, transparent: true, opacity: 1 });
+        var plane = new THREE.Mesh(geometry, material);
+        plane.side = THREE.DoubleSide;
+        //plane.position.z = params.height;
         return plane;
     }
 

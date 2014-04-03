@@ -7,10 +7,12 @@
     $.game.reward = {
         _rewardsListMaster:
             [
-                { rewardId: 1, itemId: 2, rewardName: "Signature Timeline", status: "locked", coin: "site_files/coin-01.png" },
-                { rewardId: 2, itemId: 3, rewardName: "Test", status: "locked", coin: "site_files/coin-02.png" },
-                { rewardId: 3, itemId: 4, rewardName: "Test", status: "locked", coin: "site_files/coin-03.png" },
-                { rewardId: 4, itemId: 5, rewardName: "Video Games", status: "locked", coin: "site_files/coin-04.png" },
+              //  { rewardId: 1, itemId: 2, rewardName: "Signature Timeline", status: "locked", coin: "site_files/coin-01.png" },
+                { rewardId: 2, itemId: 2, rewardName: "Customer Connect Screens", status: "locked", coin: "site_files/coin-01.png" },
+                { rewardId: 3, itemId: 3, rewardName: "Programming Languages", status: "locked", coin: "site_files/coin-02.png" },
+                { rewardId: 4, itemId: 4, rewardName: "Agile", status: "locked", coin: "site_files/coin-03.png" },
+                { rewardId: 5, itemId: 5, rewardName: "Video Games", status: "locked", coin: "site_files/coin-04.png" },
+                { rewardId: 6, itemId: 6, rewardName: "QR Code", status: "locked", coin: "site_files/treasure-cheast.png" },
             ],
 
 

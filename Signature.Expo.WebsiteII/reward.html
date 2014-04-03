@@ -21,6 +21,9 @@
             if ($.configuration.getUnlocked() == "true") {
                 $.configuration.setUnlocked("false");
                 $("#QRCodeReward").show();
+                setTimeout(function () {
+                    window.location = "instructions.html";
+                }, 60000);
             } else {
                 window.location = "instructions.html";
             }
@@ -48,10 +51,13 @@
                     You have unlocked the MEET OUR TEAM challenge!
                 </p>
                 <p>
-                    <img src="Site_Files/tron_qrcode.jpg" />
+                    <img src="Site_Files/QRCodeMeetTheTeam.png" />
                 </p>
 				<p>
                     It has been a pleasure meeting you!
+                </p>
+                <p>
+                    <br /><a href="instructions.html">Return to Instructions</a>
                 </p>
 			</article>
 

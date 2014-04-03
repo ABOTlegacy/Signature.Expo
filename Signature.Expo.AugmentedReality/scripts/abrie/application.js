@@ -105,24 +105,24 @@ requirejs( ['webcam','ardetector','arview','arobject'], function(webcam,ardetect
 
     // Create marker objects associated with the desired marker ID.
     var markerObjects = {
-        1: arobject.createMarkerObject({ name: "1", type: "plane", texture: "textures/pinapple-01.gif", width: 200, height: 200 }), // Marker #1
+        1: arobject.createMarkerObject({ name: "1", type: "planevertical", texture: "textures/pinapple-01.gif", width: 200, height: 200 }), // Marker #1
         2: arobject.createMarkerObject({ name: "2", type: "sphere", texture: "textures/beachball.jpg", radius: 50, width: 200, height: 200 }), // Marker #2
         3: arobject.createMarkerObject({ name: "3", type: "plane", texture: "textures/starfish-01.png", width: 200, height: 200 }), // Marker #3
         4: arobject.createMarkerObject({ name: "4", type: "cubeimg", texture: "textures/coconut-01.png", width: 200, height: 200 }), // Marker #4
         5: arobject.createMarkerObject({ name: "5", type: "sphere", texture: "textures/melon02.jpg", radius: 50, width: 200, height: 200 }), // Marker #5
         6: arobject.createMarkerObject({ name: "6", type: "sphere", texture: "textures/beachball02.jpg", radius: 50, width: 200, height: 200 }), // Marker #6
-        7: arobject.createMarkerObject({ name: "7", type: "plane", texture: "textures/palmtree01.png", width: 200, height: 400 }), // Marker #7
-        8: arobject.createMarkerObject({ name: "8", type: "plane", texture: "textures/sand-castle-01.png", width: 400, height: 200 }), // Marker #8
-        9: arobject.createMarkerObject({ name: "9", type: "plane", texture: "textures/shark-01.png", width: 400, height: 200 }), // Marker #9
-        10: arobject.createMarkerObject({ name: "10", type: "plane", texture: "textures/doll-01.png", width: 200, height: 400  }), // Marker #10
-        11: arobject.createMarkerObject({ name: "11", type: "plane", texture: "textures/tiki-01.png", width: 200, height: 400 }), // Marker #11
-        12: arobject.createMarkerObject({ name: "12", type: "plane", texture: "textures/surfboard-01.png", width: 200, height: 400 }), // Marker #12
-        13: arobject.createMarkerObject({ name: "13", type: "plane", texture: "textures/ring-boey-01.png", width: 300, height: 300 }), // Marker #13
-        14: arobject.createMarkerObject({ name: "14", type: "plane", texture: "textures/jellyfish-01.png", width: 300, height: 300 }), // Marker #14
-        15: arobject.createMarkerObject({ name: "15", type: "plane", texture: "textures/sea-turtle-01.png", width: 300, height: 300 }), // Marker #15
-        16: arobject.createMarkerObject({ name: "16", type: "plane", texture: "textures/hasselhoff-01.gif", width: 200, height: 400 }), // Marker #16, red.
-        17: arobject.createMarkerObject({ name: "17", type: "plane", texture: "textures/inflatable-raft-01.png", width: 200, height: 400 }), // Marker #17
-        18: arobject.createMarkerObject({ name: "18", type: "plane", texture: "textures/love-boat-01.png", width: 300, height: 300 }), // Marker #18
+        7: arobject.createMarkerObject({ name: "7", type: "planevertical", texture: "textures/palmtree01.png", width: 200, height: 400 }), // Marker #7
+        8: arobject.createMarkerObject({ name: "8", type: "planevertical", texture: "textures/sand-castle-01.png", width: 400, height: 200 }), // Marker #8
+        9: arobject.createMarkerObject({ name: "9", type: "planevertical", texture: "textures/shark-01.png", width: 400, height: 200 }), // Marker #9
+        10: arobject.createMarkerObject({ name: "10", type: "planevertical", texture: "textures/doll-01.png", width: 200, height: 400 }), // Marker #10
+        11: arobject.createMarkerObject({ name: "11", type: "planevertical", texture: "textures/tiki-01.png", width: 200, height: 400 }), // Marker #11
+        12: arobject.createMarkerObject({ name: "12", type: "planevertical", texture: "textures/surfboard-01.png", width: 200, height: 400 }), // Marker #12
+        13: arobject.createMarkerObject({ name: "13", type: "planevertical", texture: "textures/ring-boey-01.png", width: 300, height: 300 }), // Marker #13
+        14: arobject.createMarkerObject({ name: "14", type: "planevertical", texture: "textures/jellyfish-01.png", width: 300, height: 300 }), // Marker #14
+        15: arobject.createMarkerObject({ name: "15", type: "planevertical", texture: "textures/sea-turtle-01.png", width: 300, height: 300 }), // Marker #15
+        16: arobject.createMarkerObject({ name: "16", type: "planevertical", texture: "textures/hasselhoff-01.gif", width: 200, height: 400 }), // Marker #16, red.
+        17: arobject.createMarkerObject({ name: "17", type: "planevertical", texture: "textures/inflatable-raft-01.png", width: 200, height: 400 }), // Marker #17
+        18: arobject.createMarkerObject({ name: "18", type: "planevertical", texture: "textures/love-boat-01.png", width: 300, height: 300 }), // Marker #18
         19: arobject.createMarkerObject({ name: "19", color: 0x00BB00, type: "cube", width: 200, height: 200 }), // Marker #19
         20: arobject.createMarkerObject({ name: "20", color: 0x00BB00, type: "cube", width: 200, height: 200 }), // Marker #20
         21: arobject.createMarkerObject({ name: "21", color: 0x00BB00, type: "cube", width: 200, height: 200 }), // Marker #21

@@ -44,8 +44,10 @@
         // Set callback to run when API is loaded
         $(document).ready(function () {
             // Load Rewards
-            $("div#rw3").load("html/timeline01.html");
-            $("div#rw4").load("html/bargraph01.html");
+            $("div#rw2").load("html/reward-02/portal-screenshots.html");
+            $("div#rw4").load("html/reward-04/agile.html");
+            $("div#rw5").load("html/reward-05/video-games.html");
+            //$("div#rw4").load("html/bargraph01.html");
 
             // Initialize Ground
             $.game.ground.initilize();
@@ -103,7 +105,7 @@
         </div>
         
         <!-- Shovel -->
-        <div id="shovel-container">
+        <div id="shovel-container"><br /><br />
             <div class='select'>
                 <img class="enabled" src="site_files/shovel-enabled.png" />
                 <img class="disabled" src="site_files/shovel-disabled.png" />
@@ -114,7 +116,6 @@
             <div id="message">
                 <label id="game-message"></label>
             </div>
-        </div>
         </div>
     </div>
     
@@ -161,27 +162,28 @@
         <!-- Rewards -->
         <div id="rewards-container">
             <div class="rewards" id="rw2">
-                <span>Reward 021</span>
+                <!-- Customer Connect Screens -->
             </div>
             <div class="rewards" id="rw3">
-                <span>Reward 03</span>
+                <!-- Programming Languages -->
+                <img src="html/programming-languages.jpg" />
             </div>
             <div class="rewards" id="rw4">
-                <span>Reward 04</span>
+                <!-- Agile -->
             </div>
             <div class="rewards" id="rw5">
-                <img src="site_files/video-game-diagram.jpg" />
+                <!-- Video Games -->
             </div>
-            <div class="rewards" id="rw32">
-                <span>Beachball</span>
-            </div>
-            <div class="rewards" id="rw16">
-                <span>Sand</span>
+            <div class="rewards" id="rw6">
+                <!-- Bar Code -->
+                <img src="html/reward-06.png" />
             </div>
             <div class="rewards" id="rwNotFound">
+                <!-- Not Found -->
                 <img src="site_files/no-treasure-found.jpg" />
             </div>
             <div class="rewards" id="rwClose">
+                <!-- Close -->
                 <img src="site_files/red-x.png" />
             </div>
         </div>

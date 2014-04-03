@@ -3,7 +3,7 @@
         "id": 1,
         "name": "Andy Bottom",
         "teamname": "Remote Worker",
-        "position": "Software Developer",
+        "position": "Developer",
 		"answer": "Hot Chocolate",
 		"image": [
 			"abottom_grayscale.png",
@@ -12,90 +12,167 @@
     },
     {
         "id": 2,
-        "name": "John Smith",
-        "teamname": "Remote Worker",
-        "position": "Software Developer",
-		"answer": "Guess",
+        "name": "Kimberly Onnen",
+        "teamname": "Signature",
+        "position": "Technical Writer",
+		"answer": "Screaming O",
 		"image": [
-			"default_grayscale.png",
-			"default.png"
+			"konnen_grayscale.png",
+			"konnen.png"
 		]
     },
     {
         "id": 3,
-        "name": "John Smith",
+        "name": "Dan Balsbaugh",
         "teamname": "Remote Worker",
-        "position": "Software Developer",
-		"answer": "Guess",
+        "position": "Sr. Developer",
+		"answer": "Captain Morgan",
 		"image": [
-			"default_grayscale.png",
-			"default.png"
+			"dbalsbaugh_grayscale.png",
+			"dbalsbaugh.png"
 		]
     },
 	{
         "id": 4,
-        "name": "John Smith",
+        "name": "Billie Jo Hayes",
         "teamname": "Remote Worker",
-        "position": "Software Developer",
-		"answer": "Guess",
+        "position": "Development Manager",
+		"answer": "Wine",
 		"image": [
-			"default_grayscale.png",
-			"default.png"
+			"bhayes_grayscale.png",
+			"bhayes.png"
 		]
     },
     {
         "id": 5,
-        "name": "John Smith",
-        "teamname": "Remote Worker",
-        "position": "Software Developer",
-		"answer": "Guess",
+        "name": "Tamkeen Siddiqui",
+        "teamname": "Signature Core",
+        "position": "Developer",
+		"answer": "Diet Coke",
 		"image": [
-			"default_grayscale.png",
-			"default.png"
+			"tsiddiqui_grayscale.png",
+			"tsiddiqui.png"
 		]
     },
-    {
+	{
         "id": 6,
-        "name": "John Smith",
-        "teamname": "Remote Worker",
-        "position": "Software Developer",
-		"answer": "Guess",
+        "name": "Geoff Harding",
+        "teamname": "Signature",
+        "position": "Developer",
+		"answer": "Root Beer Float",
 		"image": [
-			"default_grayscale.png",
-			"default.png"
+			"gharding_grayscale.png",
+			"gharding.png"
 		]
     },
-		{
+	{
         "id": 7,
-        "name": "John Smith",
+        "name": "Samson Williams",
         "teamname": "Remote Worker",
-        "position": "Software Developer",
-		"answer": "Guess",
+        "position": "Developer",
+		"answer": "Dr. Pepper 10",
 		"image": [
-			"default_grayscale.png",
-			"default.png"
+			"swilliams_grayscale.png",
+			"swilliams.png"
 		]
     },
-    {
+	{
         "id": 8,
-        "name": "John Smith",
+        "name": "Gary Fehr",
         "teamname": "Remote Worker",
-        "position": "Software Developer",
-		"answer": "Guess",
+        "position": "Sr. Developer",
+		"answer": "Bud Light",
 		"image": [
-			"default_grayscale.png",
-			"default.png"
+			"gfehr_grayscale.png",
+			"gfehr.png"
 		]
     },
-    {
+	{
         "id": 9,
-        "name": "John Smith",
+        "name": "John Meyer",
         "teamname": "Remote Worker",
-        "position": "Software Developer",
-		"answer": "Guess",
+        "position": "Sr. Developer",
+		"answer": "Whiskey",
 		"image": [
-			"default_grayscale.png",
-			"default.png"
+			"jmeyer_grayscale.png",
+			"jmeyer.png"
+		]
+    },
+	{
+        "id": 10,
+        "name": "Ryan Schulz",
+        "teamname": "Portal Team",
+        "position": "Developer",
+		"answer": "Gin Tonic",
+		"image": [
+			"rschulz_grayscale.png",
+			"rschulz.png"
+		]
+    },
+	{
+        "id": 11,
+        "name": "Ben Soddy",
+        "teamname": "Portal Team",
+        "position": "Developer",
+		"answer": "Fuel Cafe",
+		"image": [
+			"bsoddy_grayscale.png",
+			"bsoddy.png"
+		]
+    },
+	{
+        "id": 12,
+        "name": "Dave Gerbing",
+        "teamname": "Signature",
+        "position": "Sr. Developer",
+		"answer": "Jake And Coke",
+		"image": [
+			"dgerbing_grayscale.png",
+			"dgerbing.png"
+		]
+    },
+	{
+        "id": 13,
+        "name": "Ronald Schulz",
+        "teamname": "Signature",
+        "position": "Developer",
+		"answer": "Root Beer",
+		"image": [
+			"ron_grayscale.png",
+			"ron.png"
+		]
+    },
+	{
+        "id": 14,
+        "name": "Sonja Berry",
+        "teamname": "Signature",
+        "position": "Business Analyst",
+		"answer": "The Wet Kind",
+		"image": [
+			"sberry_grayscale.png",
+			"sberry.png"
+		]
+    },
+	{
+        "id": 15,
+        "name": "Nancy Connelly",
+        "teamname": "Signature",
+        "position": "Product Director",
+		"answer": "Margarita",
+		"image": [
+			"nconnelly_grayscale.png",
+			"nconnelly.png"
+		]
+    },
+	{
+        "id": 16,
+        "name": "Don Vangsness",
+        "teamname": "Customer Connect",
+        "position": "Developer",
+		"answer": "Diet Mountain Dew",
+		"image": [
+			"dvangsness_grayscale.png",
+			"dvangsness.png"
 		]
     }
 ]

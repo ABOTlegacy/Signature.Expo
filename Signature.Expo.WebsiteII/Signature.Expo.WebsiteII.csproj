@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="lost.html" />
     <Content Include="game.html" />
     <Content Include="html\GuessingTile.html" />
     <Content Include="html\GameStats.html" />
@@ -90,6 +91,7 @@
     <Content Include="Site_Files\Background02.png" />
     <Content Include="Site_Files\Background03.png" />
     <Content Include="Site_Files\Background04.png" />
+    <Content Include="Site_Files\BetterLuckNextTime.png" />
     <Content Include="Site_Files\Logos\Promo Items Use\WennSoftLogo.jpg" />
     <Content Include="Site_Files\Logos\Superseded\Logo-BW.jpg" />
     <Content Include="Site_Files\Logos\Superseded\WennSoftStd Color Logo PNG.png" />
@@ -110,6 +112,9 @@
     <Content Include="Site_Files\Logos\WennSoftLogoWTagline_reversed.png" />
     <Content Include="Site_Files\Logos\WennSoftLogo_reversed.png" />
     <Content Include="Site_Files\Logos\WSLogo105_33.gif" />
+    <Content Include="Site_Files\QRCodeMeetTheTeam.png" />
+    <Content Include="Site_Files\QRpost.png" />
+    <Content Include="Site_Files\tron_qrcode.jpg" />
     <Content Include="Site_Files\WennSoftLogoSignature.png" />
     <Content Include="Site_Files\WennSoftLogoSignature02.png" />
     <Content Include="Site_Files\WennSoftSignature01.png" />

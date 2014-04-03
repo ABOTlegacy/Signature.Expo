@@ -1,0 +1,69 @@
+<style>
+    .slideshow-slide {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 640px;
+        height: 480px;
+    }
+    .slideshow-slide img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .slideshow-prev-button {
+        position: absolute;
+        bottom: 40px;
+        left: 40px;
+        width: 160px;
+        height: 160px;
+    }
+    .slideshow-next-button {
+        position: absolute;
+        bottom: 40px;
+        right: 40px;
+        width: 160px;
+        height: 160px;
+    }
+</style>
+
+<div style="position: relative; height: 480px; width: 640px;">
+    <div class="slideshow-slide" id="QW0" attr-prev="" attr-next="QW1">
+        <img src="html/reward-02/slide-00.png" />
+    </div>
+    <div class="slideshow-slide" id="QW1" attr-prev="QW0" attr-next="QW2" style="display: none;" >
+        <img src="html/reward-02/slide-01.png" />
+    </div>
+    <div class="slideshow-slide" id="QW2" attr-prev="QW1" attr-next="QW3" style="display: none;" >
+        <img src="html/reward-02/slide-02.png" />
+    </div>
+    <div class="slideshow-slide" id="QW3" attr-prev="QW2" attr-next="" style="display: none;" >
+        <img src="html/reward-02/slide-03.png" />
+    </div>
+
+    <div id="QWPrev" class="slideshow-prev-button" attr-current="QW0"><img src="site_files/icon-slideshow-previous.png" /></div>
+    <div id="QWNext" class="slideshow-next-button" attr-current="QW0"><img src="site_files/icon-slideshow-next.png" /></div>
+</div>
+
+<script>
+    $("#QWPrev").on("click", function () {
+        var currentId = $("#QWPrev").attr("attr-current");
+        var targetId = $("#" + currentId).attr("attr-prev");
+        if (targetId != "") {
+            $("#" + currentId).hide();
+            $("#" + targetId).show();
+            $("#QWPrev").attr("attr-current", targetId);
+            $("#QWNext").attr("attr-current", targetId);
+        }
+    });
+    $("#QWNext").on("click", function () {
+        var currentId = $("#QWNext").attr("attr-current");
+        var targetId = $("#" + currentId).attr("attr-next");
+        if (targetId != "") {
+            $("#" + currentId).hide();
+            $("#" + targetId).show();
+            $("#QWPrev").attr("attr-current", targetId);
+            $("#QWNext").attr("attr-current", targetId);
+        }
+    });
+</script>
